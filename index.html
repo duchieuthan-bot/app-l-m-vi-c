@@ -1,0 +1,1520 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đề nghị thanh toán – Phân hiệu HVHC&amp;QTC Đà Nẵng</title>
+<meta name="theme-color" content="#2c2a7d">
+<meta name="description" content="Lập Giấy đề nghị thanh toán (Mẫu 02/QTHV) nhanh từ hợp đồng, hóa đơn điện tử">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1d1f3d; --ink2:#4a4d6e; --mute:#7b879b; --line:#d6dce6; --line2:#e7ebf1;
+  --bg:#e9ebf3; --panel:#fff; --soft:#f4f5f9; --navy:#2c2a7d; --blue:#2c2a7d; --blue-bg:#ecebf7; --brand-red:#ed1c2a;
+  --green:#15664e; --green-bg:#e6f2ed; --red:#b42318; --red-bg:#fcebe9; --amber:#8a5600; --amber-bg:#fdf3dc;
+  --seal:#ed1c2a; --r:8px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font:14px/1.5 "Be Vietnam Pro",system-ui,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.num{font-variant-numeric:tabular-nums}
+
+/* ===== top bar ===== */
+.topbar{height:62px;background:#fff;color:var(--ink);display:flex;align-items:center;gap:14px;padding:0 18px;position:sticky;top:0;z-index:20;border-top:3px solid var(--navy);border-bottom:1px solid var(--line)}
+.logo{height:30px;width:auto;display:block;flex:none}
+.brand{min-width:0;padding-left:14px;border-left:1px solid var(--line)}
+.brand h1{font-size:15px;font-weight:700;margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--navy)}
+.brand small{display:block;font-size:12px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.meter{display:flex;align-items:center;gap:8px;margin-left:auto;font-size:12.5px;color:var(--ink2)}
+.meter .bar{width:96px;height:6px;border-radius:3px;background:var(--line2);overflow:hidden}
+.meter .bar i{display:block;height:100%;background:var(--green);width:0;transition:width .3s}
+.tb{display:flex;gap:8px;align-items:center}
+.tbtn{height:38px;padding:0 13px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:7px;font-weight:500;white-space:nowrap}
+.tbtn:hover{border-color:var(--ink2);background:var(--soft)}
+.tbtn.solid{background:var(--navy);color:#fff;border-color:var(--navy)}
+.tbtn.solid:hover{background:#3a37a0}
+.tbtn.icon{width:38px;padding:0;justify-content:center;font-weight:700;font-size:15px}
+.tbtn svg{width:16px;height:16px;flex:none}
+/* hướng dẫn 3 bước */
+.guide{border:1px solid #d9d8ef;background:var(--blue-bg);border-radius:10px;padding:12px 14px 12px;margin-bottom:12px}
+.guide-h{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.guide-h b{font-size:14px;color:var(--navy)}
+.guide-h .link{margin-left:auto}
+.guide ol{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.guide li{display:flex;gap:10px;font-size:13px;line-height:1.4;align-items:flex-start}
+.guide li i{font-style:normal;width:22px;height:22px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.guide li span b{color:var(--ink)}
+.auto{display:inline-block;font-size:11px;font-weight:600;color:var(--green);background:var(--green-bg);border-radius:9px;padding:1px 7px;margin-left:6px;vertical-align:1px}
+.auto[hidden]{display:none}
+.help h4{margin:14px 0 4px;font-size:14px;color:var(--navy)}
+.help p,.help li{font-size:13.5px;color:var(--ink2);margin:0 0 4px}
+.help ul{margin:0;padding-left:18px}
+.help kbd{font:600 12px "Be Vietnam Pro",sans-serif;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 5px;background:#fff;color:var(--ink)}
+.menu{position:relative}
+.menu>summary{list-style:none}
+.menu>summary::-webkit-details-marker{display:none}
+.menu .pop{position:absolute;right:0;top:42px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(20,32,56,.18);min-width:250px;padding:6px;z-index:30}
+.menu .pop button{display:block;width:100%;text-align:left;padding:9px 11px;border:0;background:none;border-radius:7px;cursor:pointer}
+.menu .pop button:hover{background:var(--soft)}
+.menu .pop button small{display:block;color:var(--mute);font-size:12px}
+
+/* ===== layout ===== */
+.app{display:grid;grid-template-columns:minmax(390px,470px) 1fr;height:calc(100vh - 58px)}
+.side{min-width:0;background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.tabs{display:flex;border-bottom:1px solid var(--line);padding:0 10px;flex:none;overflow-x:auto}
+.tab{border:0;background:none;padding:12px 11px 10px;cursor:pointer;color:var(--ink2);font-weight:500;border-bottom:2px solid transparent;white-space:nowrap}
+.tab[aria-selected=true]{color:var(--ink);border-color:var(--ink)}
+.tab .cnt{font-size:11px;background:var(--soft);border-radius:9px;padding:1px 6px;margin-left:4px;color:var(--ink2)}
+.pane{overflow:auto;flex:1;padding:14px 16px 40px}
+.pane[hidden]{display:none}
+
+/* steps */
+.step{border:1px solid var(--line);border-radius:10px;margin-bottom:12px;background:#fff}
+.step>summary{display:flex;align-items:center;gap:10px;padding:12px 14px;cursor:pointer;list-style:none;user-select:none}
+.step>summary::-webkit-details-marker{display:none}
+.step .no{width:24px;height:24px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:12px;font-weight:600;flex:none}
+.step.ok .no{background:var(--green);border-color:var(--green);color:#fff}
+.step h2{font-size:14.5px;margin:0;font-weight:600}
+.step .sum{margin-left:auto;font-size:12.5px;color:var(--mute);text-align:right;max-width:52%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.step .chev{width:16px;height:16px;color:var(--mute);transition:transform .2s;flex:none}
+.step[open] .chev{transform:rotate(180deg)}
+.step .body{padding:2px 14px 14px;border-top:1px solid var(--line2)}
+
+.f{margin-top:12px}
+.f>label,.lbl{display:block;font-size:12.5px;font-weight:500;color:var(--ink2);margin-bottom:5px}
+.f .hint{font-size:12px;color:var(--mute);margin-top:5px}
+.req::after{content:" *";color:var(--red)}
+.in{width:100%;min-width:0;height:38px;border:1px solid var(--line);border-radius:7px;padding:0 10px;background:#fff;transition:border-color .15s,box-shadow .15s}
+textarea.in{height:auto;min-height:64px;padding:8px 10px;resize:vertical;line-height:1.45}
+.in:hover{border-color:#b9c3d3}
+.in:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(36,83,166,.14)}
+.in.flash{animation:flash 1.4s}
+@keyframes flash{0%,60%{box-shadow:0 0 0 3px rgba(180,35,24,.35);border-color:var(--red)}}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.row>.f,.row3>.f{margin-top:12px}
+.money{position:relative}
+.money .in{text-align:right;padding-right:30px;font-variant-numeric:tabular-nums}
+.money::after{content:"đ";position:absolute;right:11px;top:50%;transform:translateY(-50%);color:var(--mute);font-size:13px;pointer-events:none}
+.money.big .in{height:48px;font-size:22px;font-weight:600}
+textarea.grow{field-sizing:content;min-height:96px;max-height:260px}
+.words{font:italic 15px/1.45 Tinos,"Times New Roman",serif;color:var(--ink);background:var(--soft);border-radius:7px;padding:8px 10px;min-height:38px;border:1px dashed var(--line)}
+.inline{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.check{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink2);cursor:pointer}
+.check input{width:16px;height:16px;accent-color:var(--navy)}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:1px solid var(--line);border-radius:8px;padding:3px;gap:3px;background:var(--soft)}
+.seg label{text-align:center;padding:7px 6px;border-radius:6px;cursor:pointer;font-size:12.5px;line-height:1.3;color:var(--ink2)}
+.seg label small{display:block;font-size:11px;color:var(--mute)}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label:has(input:checked){background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(20,32,56,.12),0 0 0 1px var(--line);font-weight:600}
+.seg label:has(input:focus-visible){outline:2px solid var(--blue)}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:7px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 10px;font-size:12.5px;cursor:pointer;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink2)}
+.chip:hover{border-color:var(--ink2);color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.link{border:0;background:none;color:var(--blue);cursor:pointer;padding:0;font-size:12.5px;font-weight:500}
+.link:hover{text-decoration:underline}
+.link.danger{color:var(--red)}
+
+.btn{height:36px;padding:0 13px;border-radius:7px;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:500;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btn:hover{border-color:var(--ink2)}
+.btn.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.dark:hover{background:#2a3c5e}
+.btn.sm{height:30px;padding:0 10px;font-size:12.5px}
+.btn svg{width:15px;height:15px}
+
+/* dropzone */
+.drop{display:block;border:1.5px dashed #b6c0cf;border-radius:10px;padding:18px 14px;text-align:center;cursor:pointer;background:var(--soft);transition:background .15s,border-color .15s;margin-top:12px}
+.drop:hover,.drop.over{background:var(--blue-bg);border-color:var(--blue)}
+.drop b{display:block;font-size:14px;margin-bottom:3px}
+.drop span{font-size:12px;color:var(--mute)}
+.drop svg{width:26px;height:26px;color:var(--ink2);margin-bottom:4px}
+.files{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.files li{display:flex;align-items:center;gap:9px;border:1px solid var(--line2);border-radius:8px;padding:7px 9px;font-size:12.5px}
+.ftype{font-size:10.5px;font-weight:700;border-radius:4px;padding:2px 5px;background:var(--soft);color:var(--ink2);flex:none;min-width:36px;text-align:center}
+.ftype.pdf{background:#fbe9e7;color:#9d2a1d}.ftype.xml{background:#e6f2ed;color:var(--green)}.ftype.xls{background:#e5f3e8;color:#1e6b33}.ftype.doc{background:#e7eefa;color:var(--blue)}
+.files .nm{min-width:0;flex:1}
+.files .nm b{display:block;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.files .nm small{color:var(--mute)}
+.files .nm small.ok{color:var(--green)}.files .nm small.warn{color:var(--amber)}.files .nm small.err{color:var(--red)}
+.x{border:0;background:none;cursor:pointer;color:var(--mute);width:26px;height:26px;border-radius:6px;flex:none;font-size:16px;line-height:1}
+.x:hover{background:var(--soft);color:var(--red)}
+.textview{margin-top:10px}
+.textview summary{font-size:12.5px;color:var(--blue);cursor:pointer}
+.textview pre{white-space:pre-wrap;font:12px/1.5 ui-monospace,Consolas,monospace;background:var(--soft);border-radius:7px;padding:10px;max-height:240px;overflow:auto;margin:8px 0 0}
+
+/* invoices */
+.inv-head{display:flex;align-items:center;justify-content:space-between;margin-top:16px}
+.inv-head .lbl{margin:0}
+.inv{border:1px solid var(--line);border-left:3px solid var(--green);border-radius:8px;padding:9px 10px 10px;margin-top:8px;background:#fff}
+.inv.bad{border-left-color:var(--red)}
+.inv-top{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--ink2)}
+.inv-top b{color:var(--ink)}
+.inv-top .x{margin-left:auto}
+.inv .g{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:6px}
+.inv .g .in{height:32px;font-size:12.5px;padding:0 8px}
+.inv .g>div{min-width:0}
+.inv .g label{font-size:11px;color:var(--mute);display:block;margin-bottom:2px}
+.inv .c2{grid-column:span 2}.inv .c3{grid-column:span 3}.inv .c4{grid-column:span 4}.inv .c6{grid-column:span 6}
+.inv .money .in{padding-right:8px}.inv .money::after{display:none}
+.totals{display:flex;justify-content:space-between;align-items:center;margin-top:10px;padding:9px 11px;border-radius:8px;background:var(--green-bg);color:var(--green);font-size:13px}
+.totals b{font-size:15px}
+.empty{font-size:12.5px;color:var(--mute);padding:10px 0 2px}
+.cl{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:4px}
+.cl label{display:flex;gap:8px;align-items:flex-start;font-size:13px;cursor:pointer;padding:4px 2px}
+.cl input{margin-top:3px;accent-color:var(--green);width:15px;height:15px;flex:none}
+.calc{display:flex;justify-content:space-between;background:var(--soft);border-radius:7px;padding:9px 11px;margin-top:10px;font-size:13px}
+.calc b{font-variant-numeric:tabular-nums}
+
+/* signers */
+.ky{display:grid;grid-template-columns:22px 1fr 1fr;gap:6px;align-items:center;margin-top:6px}
+.ky .in{height:34px;font-size:12.5px}
+.ky input[type=checkbox]{width:16px;height:16px;accent-color:var(--navy)}
+.range{display:flex;align-items:center;gap:10px}
+.range input{flex:1;accent-color:var(--navy)}
+.range output{min-width:46px;text-align:right;font-weight:600;font-size:13px}
+
+/* list panes */
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.toolbar .in{flex:1}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.stat div{background:var(--soft);border-radius:8px;padding:9px 11px}
+.stat small{display:block;color:var(--mute);font-size:12px}
+.stat b{font-size:16px;font-variant-numeric:tabular-nums}
+.dr{border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-bottom:8px;background:#fff}
+.dr.cur{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.dr-top{display:flex;gap:8px;align-items:baseline}
+.dr-top b{font-variant-numeric:tabular-nums;font-size:14.5px}
+.dr-top small{margin-left:auto;color:var(--mute);font-size:12px;white-space:nowrap}
+.dr p{margin:3px 0 0;font-size:13px;color:var(--ink2);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.dr .acts{display:flex;gap:12px;margin-top:8px;align-items:center}
+.badge{font-size:11px;font-weight:600;padding:2px 7px;border-radius:9px;background:var(--amber-bg);color:var(--amber);white-space:nowrap}
+.badge.done{background:var(--green-bg);color:var(--green)}
+.cat h3{font-size:13.5px;margin:18px 0 6px;display:flex;justify-content:space-between}
+.cat h3 span{font-weight:400;color:var(--mute);font-size:12px}
+.cat ul{list-style:none;margin:0;padding:0;border:1px solid var(--line2);border-radius:8px}
+.cat li{display:flex;align-items:center;gap:8px;padding:7px 6px 7px 11px;border-top:1px solid var(--line2);font-size:13px}
+.cat li:first-child{border-top:0}
+.cat li div{flex:1;min-width:0}
+.cat li small{display:block;color:var(--mute);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.note{font-size:12.5px;color:var(--ink2);background:var(--soft);border-radius:8px;padding:10px 12px;margin-top:12px}
+
+/* ===== preview ===== */
+.preview{overflow:auto;min-height:0;background:#dde2ea;display:flex;flex-direction:column}
+.pv-bar{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(221,226,234,.92);backdrop-filter:blur(6px);border-bottom:1px solid #cdd4de;font-size:12.5px;color:var(--ink2)}
+.zoom{display:flex;align-items:center;border:1px solid #c3cbd8;border-radius:7px;background:#fff;overflow:hidden}
+.zoom button{border:0;background:none;width:30px;height:28px;cursor:pointer;font-size:15px}
+.zoom button:hover{background:var(--soft)}
+.zoom span{min-width:46px;text-align:center;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.pv-bar .sp{margin-left:auto}
+.pages{padding:24px 24px 60px;display:flex;flex-direction:column;align-items:center;gap:22px}
+
+/* ===== A4 document ===== */
+.page{width:210mm;min-height:297mm;background:#fff;padding:18mm 15mm 18mm 25mm;box-shadow:0 1px 3px rgba(20,32,56,.12),0 10px 30px rgba(20,32,56,.12);color:#000;font:13pt/1.45 "Times New Roman",Tinos,serif;position:relative}
+.page p{margin:0 0 5pt}
+.d-head{width:100%;border-collapse:collapse;margin-bottom:14pt}
+.d-head td{vertical-align:top;padding:0}
+.d-org{text-align:center;font-size:12pt;line-height:1.3;width:58%}
+.d-org .u1{text-transform:uppercase}
+.d-logo{height:13mm;width:auto;display:block;margin:0 auto 2pt}
+.d-org .u2{font-weight:700;text-transform:uppercase}
+.d-org .rule{width:34%;border-top:1px solid #000;margin:3pt auto 0}
+.d-org .so{margin-top:6pt}
+.d-form{text-align:right;font-size:12pt;font-weight:700}
+.d-title{text-align:center;font-weight:700;font-size:15pt;margin:4pt 0 2pt;letter-spacing:.3pt}
+.d-date{text-align:center;font-style:italic;margin-bottom:12pt}
+.d-kg{margin:0 0 10pt;padding-left:12%;text-indent:0}
+.d-kg b{font-weight:400}
+.d-ln{text-align:justify}
+.d-ln .v{font-weight:400}
+.d-ln .em{font-style:italic}
+.d-ln .bold{font-weight:700}
+.d-sig{width:100%;border-collapse:collapse;margin-top:16pt;table-layout:fixed}
+.d-sig td{text-align:center;vertical-align:top;padding:0 2pt;line-height:1.25}
+.d-sig .t{font-weight:700;text-transform:uppercase}
+.d-sig .k{font-style:italic;font-weight:400}
+.d-sig .n{font-weight:700}
+.d-bk-title{text-align:center;font-weight:700;font-size:14pt;margin:6pt 0 0}
+.d-bk-sub{text-align:center;font-style:italic;margin:0 0 12pt}
+.d-tbl{width:100%;border-collapse:collapse;font-size:11pt;line-height:1.3}
+.d-tbl th,.d-tbl td{border:1px solid #000;padding:4pt 4pt;vertical-align:top}
+.d-tbl th{font-weight:700;text-align:center}
+.d-tbl .r{text-align:right;white-space:nowrap}
+.d-tbl .c{text-align:center}
+.d-tbl tfoot td{font-weight:700}
+.pg-no{position:absolute;bottom:9mm;right:15mm;font:10pt Tinos,serif;color:#666}
+
+/* toast & dialog */
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:10px 14px;border-radius:9px;font-size:13.5px;box-shadow:0 10px 30px rgba(20,32,56,.3);opacity:0;pointer-events:none;transition:all .2s;z-index:60;display:flex;gap:14px;align-items:center;max-width:calc(100vw - 32px)}
+.toast.show{opacity:1;transform:translateX(-50%);pointer-events:auto}
+.toast button{border:0;background:none;color:#9fc3ff;font-weight:600;cursor:pointer;padding:0}
+dialog{border:0;border-radius:14px;padding:0;width:min(560px,calc(100vw - 24px));max-height:calc(100vh - 40px);box-shadow:0 24px 60px rgba(20,32,56,.35);color:var(--ink)}
+dialog::backdrop{background:rgba(20,32,56,.45)}
+.dlg-h{padding:16px 18px 12px;border-bottom:1px solid var(--line2);display:flex;align-items:center;gap:10px}
+.dlg-h h3{margin:0;font-size:16px}
+.dlg-h .x{margin-left:auto}
+.dlg-b{padding:12px 18px;overflow:auto;max-height:60vh}
+.dlg-f{padding:12px 18px 16px;border-top:1px solid var(--line2);display:flex;gap:8px;justify-content:flex-end}
+.verdict{display:flex;gap:10px;align-items:center;padding:12px;border-radius:9px;margin-bottom:10px;font-weight:600}
+.verdict.ok{background:var(--green-bg);color:var(--green)}
+.verdict.warn{background:var(--amber-bg);color:var(--amber)}
+.verdict.err{background:var(--red-bg);color:var(--red)}
+.issues{list-style:none;margin:0;padding:0}
+.issues li{display:flex;gap:10px;padding:9px 4px;border-top:1px solid var(--line2);font-size:13.5px;align-items:flex-start}
+.issues li:first-child{border-top:0}
+.issues .dot{width:8px;height:8px;border-radius:50%;margin-top:7px;flex:none}
+.issues .err .dot{background:var(--red)}.issues .warn .dot{background:#d99a12}.issues .info .dot{background:var(--blue)}
+.issues li div{flex:1}
+.issues small{display:block;color:var(--mute);font-size:12px}
+
+.mswitch{display:none}
+
+@media (max-width:980px){
+  .app{grid-template-columns:minmax(0,1fr);height:auto}
+  .side{border-right:0;min-height:calc(100vh - 58px)}
+  .pane{padding-bottom:90px}
+  .preview{display:none}
+  body.show-pv .side{display:none}
+  body.show-pv .preview{display:flex;min-height:calc(100vh - 58px)}
+  .pages{padding:14px 8px 90px}
+  .mswitch{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));background:var(--ink);border-radius:12px;padding:4px;gap:4px;z-index:40;box-shadow:0 10px 30px rgba(20,32,56,.35)}
+  .mswitch button{border:0;background:none;color:#cfd8e8;height:40px;border-radius:9px;font-weight:600;cursor:pointer}
+  .mswitch button[aria-pressed=true]{background:#fff;color:var(--navy)}
+  .meter,.tb .hide-m{display:none}
+  .brand small{display:none}
+  .logo{height:24px}
+  .mswitch{background:var(--navy)}
+}
+@media (max-width:520px){
+  .hide-s{display:none}
+  .brand{display:none}
+  .topbar{padding:0 10px;gap:8px}
+  .brand{padding-left:8px}
+  .brand h1{font-size:13.5px}
+  .tbtn .lb{display:none}
+  .tbtn{padding:0 10px}
+  .row3{grid-template-columns:1fr 1fr}
+  .inv .g{grid-template-columns:repeat(4,1fr)}
+  .inv .c3{grid-column:span 2}.inv .c6{grid-column:span 4}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@media print{
+  @page{size:A4;margin:0}
+  html,body{background:#fff;height:auto}
+  .topbar,.side,.pv-bar,.mswitch,.toast,dialog{display:none!important}
+  .app{display:block;height:auto}
+  .preview{display:block!important;overflow:visible;background:#fff}
+  .pages{padding:0;display:block;zoom:1!important}
+  .page{box-shadow:none;margin:0;break-after:page;page-break-after:always;min-height:296mm}
+  .page:last-child{break-after:auto;page-break-after:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <img class="logo" src="data:image/png;base64,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" alt="Học viện Hành chính và Quản trị công">
+  <div class="brand">
+    <h1>Đề nghị thanh toán</h1>
+    <small><span class="hide-s">Phân hiệu tại TP. Đà Nẵng · </span><span id="status">Bản mới, chưa lưu</span></small>
+  </div>
+  <div class="meter" title="Mục bắt buộc đã điền"><div class="bar"><i id="meterBar"></i></div><span id="meterTxt">0/6</span></div>
+  <div class="tb">
+    <button class="tbtn icon" id="btnHelp" title="Hướng dẫn sử dụng" aria-label="Hướng dẫn sử dụng">?</button>
+    <button class="tbtn hide-m" id="btnCheck" title="Kiểm tra hoàn chỉnh (Ctrl+Enter)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span class="lb">Kiểm tra</span></button>
+    <button class="tbtn" id="btnSave" title="Lưu hồ sơ (Ctrl+S)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h11l3 3v15H5z"/><path d="M8 3v5h8M8 21v-7h8v7"/></svg><span class="lb">Lưu</span></button>
+    <details class="menu">
+      <summary class="tbtn" title="Xuất file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v4h16v-4"/></svg><span class="lb">Xuất</span></summary>
+      <div class="pop">
+        <button data-act="word">Tải file Word (.doc)<small>Giấy đề nghị và bảng kê, mở bằng Word để chỉnh tiếp</small></button>
+        <button data-act="excel">Tải bảng kê chứng từ (.xlsx)<small>Danh sách hóa đơn, tiền trước thuế, thuế, tổng</small></button>
+        <button data-act="backup">Sao lưu toàn bộ dữ liệu (.json)<small>Hồ sơ đã lưu, danh mục, thiết lập</small></button>
+      </div>
+    </details>
+    <button class="tbtn solid" id="btnPrint" title="In / Lưu PDF (Ctrl+P)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V3h12v6M6 18H4v-7h16v7h-2M7 14h10v7H7z"/></svg><span class="lb">In / Lưu PDF</span></button>
+  </div>
+</header>
+
+<div class="app">
+<aside class="side">
+  <nav class="tabs" role="tablist">
+    <button class="tab" role="tab" data-tab="lap" aria-selected="true">Lập giấy</button>
+    <button class="tab" role="tab" data-tab="hoso" aria-selected="false">Hồ sơ đã lưu<span class="cnt" id="cntDrafts">0</span></button>
+    <button class="tab" role="tab" data-tab="danhmuc" aria-selected="false">Danh mục</button>
+    <button class="tab" role="tab" data-tab="thietlap" aria-selected="false">Thiết lập</button>
+  </nav>
+
+  <!-- ============ LẬP GIẤY ============ -->
+  <div class="pane" data-pane="lap">
+    <div class="guide" id="guide">
+      <div class="guide-h"><b>Lập giấy trong 3 bước</b><button class="link" id="guideHide">Đã hiểu, ẩn đi</button></div>
+      <ol>
+        <li><i>1</i><span><b>Tải hợp đồng, hóa đơn</b> vào ô bên dưới. App tự đọc và điền sẵn Bên B, nội dung, số tiền, tài khoản.</span></li>
+        <li><i>2</i><span><b>Xem lại</b> các ô có dấu <span style="color:var(--red)">*</span> và các ô gắn nhãn <span class="auto" style="margin:0">Tự điền</span>. Sửa trực tiếp nếu cần.</span></li>
+        <li><i>3</i><span>Bấm <b>In / Lưu PDF</b>. App kiểm tra lỗi trước khi in và tự lưu vào Hồ sơ.</span></li>
+      </ol>
+    </div>
+
+    <details class="step" open id="st1">
+      <summary><span class="no">1</span><h2>Chứng từ kèm theo</h2><span class="sum" id="sum1"></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="body">
+        <label class="drop" id="drop">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M12 11v6m-3-3 3-3 3 3"/></svg>
+          <b>Kéo thả hoặc bấm để chọn chứng từ</b>
+          <span>Hóa đơn điện tử XML/PDF, hợp đồng Word, bảng tính Excel… chọn được nhiều file cùng lúc</span>
+          <input type="file" id="fileIn" multiple hidden accept=".xlsx,.xls,.xlsm,.docx,.doc,.pdf,.csv,.txt,.xml">
+        </label>
+        <ul class="files" id="fileList"></ul>
+        <details class="textview" id="textView" hidden>
+          <summary>Xem văn bản đã trích xuất</summary>
+          <select class="in" id="textSel" style="margin-top:8px;height:34px"></select>
+          <pre id="textPre"></pre>
+        </details>
+
+        <div class="inv-head"><span class="lbl">Hóa đơn, chứng từ thanh toán</span><button class="link" id="addInv">+ Thêm thủ công</button></div>
+        <div id="invList"></div>
+        <div id="invTotals"></div>
+
+        <div class="f">
+          <label>Loại khoản chi</label>
+          <select class="in" data-k="loai">
+            <option value="mua-sam">Mua sắm hàng hóa, vật tư</option>
+            <option value="dich-vu">Thuê dịch vụ</option>
+            <option value="sua-chua">Sửa chữa, bảo dưỡng</option>
+            <option value="hoi-nghi">Hội nghị, hội thảo, tiếp khách</option>
+            <option value="cong-tac">Công tác phí</option>
+            <option value="hop-dong">Thanh toán theo hợp đồng</option>
+            <option value="khac">Khoản chi khác</option>
+          </select>
+          <div class="hint">Đánh dấu những giấy tờ đã có trong bộ hồ sơ:</div>
+          <ul class="cl" id="checklist"></ul>
+        </div>
+      </div>
+    </details>
+
+    <details class="step" open id="st2">
+      <summary><span class="no">2</span><h2>Người đề nghị</h2><span class="sum" id="sum2"></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="body">
+        <div class="f">
+          <div class="seg" role="radiogroup" aria-label="Hình thức người đề nghị">
+            <label><input type="radio" name="mode" data-k="mode" value="ca-nhan">Người đề nghị<small>không kèm STK</small></label>
+            <label><input type="radio" name="mode" data-k="mode" value="ca-nhan-stk">Người đề nghị<small>kèm STK, ngân hàng</small></label>
+            <label><input type="radio" name="mode" data-k="mode" value="hop-dong">Theo hợp đồng<small>Bên B, nội dung HĐ</small></label>
+          </div>
+        </div>
+        <div class="f">
+          <label class="req" for="fTen">Họ và tên người đề nghị thanh toán</label>
+          <input class="in" id="fTen" data-k="nguoi.ten" autocomplete="off" placeholder="VD: Nguyễn Văn An">
+          <div class="chips" id="nameChips"></div>
+        </div>
+        <div class="row" data-mode="ca-nhan-stk">
+          <div class="f"><label>Số tài khoản</label><input class="in num" data-k="nguoi.stk" inputmode="numeric"></div>
+          <div class="f"><label>Tại ngân hàng</label><input class="in" data-k="nguoi.nh" placeholder="VD: Vietcombank – CN Đà Nẵng"></div>
+        </div>
+        <div class="f">
+          <label class="req">Bộ phận (hoặc địa chỉ)</label>
+          <input class="in" data-k="nguoi.boPhan" list="dlDept" autocomplete="off" placeholder="Chọn hoặc gõ tên phòng, khoa">
+          <datalist id="dlDept"></datalist>
+          <div class="chips" id="deptChips"></div>
+        </div>
+        <div data-mode="hop-dong">
+          <div class="row">
+            <div class="f"><label>Số hợp đồng</label><input class="in" data-k="hd.so" placeholder="VD: 15/2026/HĐ-PH"></div>
+            <div class="f"><label>Ngày ký hợp đồng</label><input class="in" type="date" data-k="hd.ngay"></div>
+          </div>
+          <div class="f"><label>Bên B (nhà cung cấp, nhà thầu)</label><input class="in" data-k="hd.benB"></div>
+          <div class="f"><label>Nội dung hợp đồng</label><input class="in" data-k="hd.noiDung" placeholder="VD: cung cấp, lắp đặt điều hòa hội trường"></div>
+          <div class="row">
+            <div class="f"><label>Giá trị hợp đồng</label><div class="money"><input class="in" data-k="hd.giaTri" data-type="money" inputmode="numeric"></div></div>
+            <div class="f"><label>Lần thanh toán</label>
+              <select class="in" data-k="hd.dot">
+                <option>Thanh toán</option><option>Tạm ứng</option><option>Thanh toán đợt 1</option><option>Thanh toán đợt 2</option><option>Thanh toán lần cuối và thanh lý</option>
+              </select></div>
+          </div>
+          <div class="f inline"><button class="btn sm" id="btnHdToND">Tạo nội dung thanh toán theo hợp đồng</button><button class="btn sm" id="btnHdToTH">Lấy Bên B làm đơn vị thụ hưởng</button></div>
+        </div>
+      </div>
+    </details>
+
+    <details class="step" open id="st3">
+      <summary><span class="no">3</span><h2>Nội dung và số tiền</h2><span class="sum" id="sum3"></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="body">
+        <div class="row">
+          <div class="f"><label>Ngày lập</label><input class="in" type="date" data-k="ngay"></div>
+          <div class="f"><label>Số giấy (nếu có)</label><input class="in" data-k="so" placeholder="Để trống nếu không đánh số"></div>
+        </div>
+        <label class="check" style="margin-top:8px"><input type="checkbox" data-k="deTrongNgay"> Để trống ngày tháng để ghi tay khi trình ký</label>
+        <div class="f"><label>Kính gửi</label><textarea class="in" rows="2" data-k="kinhGui"></textarea></div>
+        <div class="f">
+          <label class="req">Nội dung thanh toán<span class="auto" id="autoND" hidden></span></label>
+          <textarea class="in grow" rows="4" data-k="noiDung" placeholder="Tự điền khi tải hợp đồng hoặc hóa đơn; có thể sửa lại"></textarea>
+          <div id="ndStyle" hidden><div class="hint" style="font-size:12px;color:var(--mute);margin-top:8px">Cách viết theo hợp đồng:</div><div class="chips" id="ndStyleChips" style="margin-top:4px"></div></div>
+          <div class="chips" id="ndChips"></div>
+        </div>
+        <div class="f">
+          <div class="inline" style="justify-content:space-between;margin-bottom:5px"><label class="req" style="margin:0;font-size:12.5px;font-weight:500;color:var(--ink2)">Số tiền đề nghị thanh toán<span class="auto" id="autoST" hidden></span></label>
+            <label class="check"><input type="checkbox" data-k="autoSum"> Tự cộng từ hóa đơn</label></div>
+          <div class="money big"><input class="in" data-k="soTien" data-type="money" inputmode="numeric" placeholder="0"></div>
+        </div>
+        <div class="f">
+          <div class="inline" style="justify-content:space-between;margin-bottom:5px"><span class="lbl" style="margin:0">Viết bằng chữ</span><button class="link" id="btnReread">Đọc lại theo số</button></div>
+          <textarea class="in words" rows="2" data-k="chu"></textarea>
+        </div>
+        <div class="row">
+          <div class="f"><label>Số chứng từ gốc kèm theo</label><input class="in num" type="number" min="0" data-k="kemTheo"></div>
+          <div class="f"><label>Số tiền đã tạm ứng</label><div class="money"><input class="in" data-k="tamUng" data-type="money" inputmode="numeric" placeholder="0"></div></div>
+        </div>
+        <div id="calcBox"></div>
+        <div class="f">
+          <label>Hình thức thanh toán</label>
+          <div class="seg">
+            <label><input type="radio" name="ht" data-k="hinhThuc" value="ck">Chuyển khoản</label>
+            <label><input type="radio" name="ht" data-k="hinhThuc" value="tm">Tiền mặt</label>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="step" open id="st4">
+      <summary><span class="no">4</span><h2>Đơn vị thụ hưởng</h2><span class="sum" id="sum4"></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="body">
+        <div class="f">
+          <div class="inline" style="justify-content:space-between;margin-bottom:5px"><label class="req" style="margin:0;font-size:12.5px;font-weight:500;color:var(--ink2)">Đơn vị / người thụ hưởng<span class="auto" id="autoTH" hidden></span></label>
+            <button class="link" id="btnSelfTH">Là chính người đề nghị</button></div>
+          <input class="in" data-k="thuHuong.ten" autocomplete="off" placeholder="Theo Bên B hợp đồng hoặc đơn vị xuất hóa đơn">
+          <div class="chips" id="thChips"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label id="lbStk">Số tài khoản</label><input class="in num" data-k="thuHuong.stk" inputmode="numeric"></div>
+          <div class="f"><label>Mã số thuế</label><input class="in num" data-k="thuHuong.mst" inputmode="numeric"></div>
+        </div>
+        <div class="f"><label>Tại ngân hàng</label><input class="in" data-k="thuHuong.nh" placeholder="VD: BIDV – CN Hải Vân"></div>
+        <div class="chips" id="acctChips"></div>
+        <div class="f inline"><button class="btn sm" id="btnSaveTH">+ Lưu đơn vị và tài khoản này</button></div>
+      </div>
+    </details>
+
+    <details class="step" id="st5">
+      <summary><span class="no">5</span><h2>Phần ký duyệt</h2><span class="sum" id="sum5"></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <div class="body">
+        <div class="hint" style="font-size:12px;color:var(--mute);margin-top:10px">Chức danh và họ tên được ghi nhớ cho các lần sau. Bỏ chọn để ẩn một ô ký.</div>
+        <div id="kyRows"></div>
+        <div class="f"><label>Cỡ chữ phần ký</label><div class="range"><input type="range" min="10" max="13" step="0.5" data-s="kyFont"><output id="oFont"></output></div></div>
+        <div class="f"><label>Khoảng trống để ký</label><div class="range"><input type="range" min="10" max="40" step="1" data-s="kyGap"><output id="oGap"></output></div></div>
+        <label class="check" style="margin-top:10px"><input type="checkbox" data-s="banKe"> In kèm trang bảng kê chứng từ (khi có hóa đơn)</label>
+        <div class="f"><button class="link" id="btnKyReset">Khôi phục mặc định phần ký</button></div>
+      </div>
+    </details>
+
+    <div class="inline" style="justify-content:space-between;margin-top:6px">
+      <button class="btn" id="btnNew">Lập giấy mới</button>
+      <button class="link danger" id="btnClear">Xoá nội dung đang nhập</button>
+    </div>
+  </div>
+
+  <!-- ============ HỒ SƠ ============ -->
+  <div class="pane" data-pane="hoso" hidden>
+    <div class="stat"><div><small>Tháng này</small><b id="stMonthN">0 giấy</b></div><div><small>Tổng tiền tháng này</small><b id="stMonthT">0 đ</b></div></div>
+    <div class="toolbar"><input class="in" id="qDraft" placeholder="Tìm theo nội dung, người đề nghị, đơn vị, số hóa đơn…"><button class="btn dark" id="btnNew2">Lập mới</button></div>
+    <div class="seg" style="margin-bottom:12px" id="fltDraft">
+      <label><input type="radio" name="flt" value="all" checked>Tất cả</label>
+      <label><input type="radio" name="flt" value="nhap">Bản nháp</label>
+      <label><input type="radio" name="flt" value="da-nop">Đã nộp kế toán</label>
+    </div>
+    <div id="draftList"></div>
+  </div>
+
+  <!-- ============ DANH MỤC ============ -->
+  <div class="pane cat" data-pane="danhmuc" hidden>
+    <div class="note" style="margin-top:0">Danh mục tự bổ sung mỗi khi bạn lưu hoặc in một giấy đề nghị. Bấm vào tên trong ô nhập để điền nhanh.</div>
+    <div id="catBox"></div>
+  </div>
+
+  <!-- ============ THIẾT LẬP ============ -->
+  <div class="pane" data-pane="thietlap" hidden>
+    <div class="f" style="margin-top:0"><label>Cơ quan chủ quản (dòng 1 tiêu đề)</label><input class="in" data-s="coQuan"></div>
+    <div class="f"><label>Tên đơn vị (dòng 2, in đậm)</label><input class="in" data-s="donVi"></div>
+    <div class="row">
+      <div class="f"><label>Mẫu số</label><input class="in" data-s="mauSo"></div>
+      <div class="f"><label>Mã số thuế đơn vị</label><input class="in num" data-s="mstDonVi" placeholder="Để đối chiếu MST người mua"></div>
+    </div>
+    <label class="check" style="margin-top:12px"><input type="checkbox" data-s="inLogo"> In logo Học viện phía trên tên đơn vị</label>
+    <div class="f"><label>Kính gửi (mặc định cho giấy mới)</label><textarea class="in" rows="2" data-s="kinhGui"></textarea></div>
+    <div class="f"><label>Ngưỡng cảnh báo thanh toán tiền mặt</label><div class="money"><input class="in" data-s="nguongTM" data-type="money" inputmode="numeric"></div>
+      <div class="hint">Hóa đơn từ mức này trở lên nên thanh toán không dùng tiền mặt.</div></div>
+    <div class="note">Dữ liệu chỉ lưu trên trình duyệt của máy này. Nên sao lưu định kỳ và khôi phục khi đổi máy.</div>
+    <div class="f inline">
+      <button class="btn" data-act="backup">Sao lưu dữ liệu</button>
+      <label class="btn">Khôi phục từ file<input type="file" id="restoreIn" accept=".json" hidden></label>
+    </div>
+    <div class="f"><button class="link danger" id="btnWipe">Xoá toàn bộ dữ liệu trên máy này</button></div>
+  </div>
+</aside>
+
+<section class="preview" aria-label="Bản xem trước khi in">
+  <div class="pv-bar">
+    <div class="zoom"><button id="zOut" aria-label="Thu nhỏ">−</button><span id="zTxt">100%</span><button id="zIn" aria-label="Phóng to">+</button></div>
+    <button class="link" id="zFit">Vừa khung</button>
+    <span class="sp" id="pvInfo">Khổ A4 · 1 trang</span>
+  </div>
+  <div class="pages" id="pages"></div>
+</section>
+</div>
+
+<div class="mswitch"><button id="mIn" aria-pressed="true">Nhập liệu</button><button id="mPv" aria-pressed="false">Xem bản in</button></div>
+
+<dialog id="dlgCheck">
+  <div class="dlg-h"><h3>Kiểm tra hoàn chỉnh</h3><button class="x" data-close aria-label="Đóng">×</button></div>
+  <div class="dlg-b" id="checkBody"></div>
+  <div class="dlg-f"><button class="btn" data-close>Quay lại sửa</button><button class="btn dark" id="dlgPrint">In / Lưu PDF</button></div>
+</dialog>
+
+<dialog id="dlgHelp" class="help">
+  <div class="dlg-h"><h3>Hướng dẫn sử dụng</h3><button class="x" data-close aria-label="Đóng">×</button></div>
+  <div class="dlg-b">
+    <h4>Tải chứng từ</h4>
+    <ul><li><b>Hợp đồng</b> (Word .docx, PDF): app lấy số, ngày ký, Bên B, tài khoản Bên B, giá trị và công việc tại Điều 1.</li>
+    <li><b>Hóa đơn điện tử</b>: nên tải file <b>XML</b> (chính xác tuyệt đối). PDF cũng đọc được nhưng cần đối chiếu lại.</li>
+    <li>File .doc cũ hoặc PDF scan dạng ảnh không đọc được chữ, hãy nhập tay.</li></ul>
+    <h4>Ô tự điền</h4>
+    <p>Ô có nhãn <span class="auto" style="margin:0">Tự điền</span> sẽ tự cập nhật khi bạn thay đổi hợp đồng, hóa đơn, lần thanh toán. Khi bạn tự gõ vào ô đó, app giữ nguyên chữ của bạn. Xoá trắng ô để app điền lại.</p>
+    <h4>Kiểm tra trước khi in</h4>
+    <p>App báo hóa đơn trùng hoặc đã thanh toán, ngày hóa đơn sau ngày lập, MST người mua sai, thụ hưởng khác Bên B, vượt giá trị hợp đồng, hóa đơn lớn trả tiền mặt.</p>
+    <h4>Lưu trữ</h4>
+    <p>Mỗi lần In hoặc Lưu, giấy được cất vào tab <b>Hồ sơ đã lưu</b>; tên người, bộ phận, đơn vị thụ hưởng được nhớ để bấm chọn lần sau. Dữ liệu nằm trên trình duyệt của máy này, nên <b>Sao lưu</b> định kỳ (tab Thiết lập).</p>
+    <h4>Cài như ứng dụng</h4>
+    <p>Trên máy tính (Chrome, Edge): bấm biểu tượng cài đặt ở thanh địa chỉ. Trên điện thoại: menu trình duyệt → <b>Thêm vào màn hình chính</b>. Sau khi cài, app mở được cả khi mất mạng.</p>
+    <h4>Phím tắt</h4>
+    <p><kbd>Ctrl</kbd>+<kbd>S</kbd> lưu · <kbd>Ctrl</kbd>+<kbd>P</kbd> in · <kbd>Ctrl</kbd>+<kbd>Enter</kbd> kiểm tra</p>
+  </div>
+  <div class="dlg-f"><button class="btn" id="guideShow">Hiện lại hướng dẫn 3 bước</button><button class="btn dark" data-close>Đóng</button></div>
+</dialog>
+
+<div class="toast" id="toast" role="status"><span id="toastTxt"></span><button id="toastAct" hidden></button></div>
+
+<script>
+"use strict";
+/* ================= helpers ================= */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+const fmt=n=>(+n||0).toLocaleString('vi-VN');
+const parseNum=s=>{s=String(s??'').trim();if(!s)return 0;s=s.replace(/[.,]\d{1,2}$/,'');return parseInt(s.replace(/\D/g,''),10)||0};
+const parseMoney=s=>{if(s==null)return 0;s=String(s).trim();if(/^\d+(\.\d+)?$/.test(s))return Math.round(parseFloat(s));return parseNum(s)};
+const vnDate=iso=>{if(!iso)return '';const[y,m,d]=iso.split('-');return `${d}/${m}/${y}`};
+const digits=s=>String(s||'').replace(/\D/g,'');
+const moneyIn=s=>parseInt(digits(s),10)||0;
+const norm=s=>String(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d')
+  .replace(/\b(cong ty|cty|tnhh|co phan|cp|mtv|mot thanh vien|dntn|doanh nghiep tu nhan|ho kinh doanh|chi nhanh)\b/g,'').replace(/[^a-z0-9]/g,'');
+const get=(o,p)=>p.split('.').reduce((a,k)=>a==null?a:a[k],o);
+const set=(o,p,v)=>{const ks=p.split('.');let a=o;ks.slice(0,-1).forEach(k=>{if(a[k]==null)a[k]={};a=a[k]});a[ks.at(-1)]=v};
+const dots=(n=1)=>'<span style="letter-spacing:-.5pt">'+'…'.repeat(Math.max(8,22*n))+'</span>';
+
+/* ============ đọc số thành chữ ============ */
+const D=['không','một','hai','ba','bốn','năm','sáu','bảy','tám','chín'];
+function r3(n,full){
+  const h=Math.floor(n/100),t=Math.floor(n%100/10),u=n%10,s=[];
+  if(h>0||full)s.push(D[h],'trăm');
+  if(t>1){s.push(D[t],'mươi');if(u===1)s.push('mốt');else if(u===5)s.push('lăm');else if(u)s.push(D[u]);}
+  else if(t===1){s.push('mười');if(u===5)s.push('lăm');else if(u)s.push(D[u]);}
+  else if(u){if(h>0||full)s.push('linh');s.push(D[u]);}
+  return s.join(' ');
+}
+function under1e9(n,full){
+  const tr=Math.floor(n/1e6),ng=Math.floor(n%1e6/1000),dv=n%1000,p=[];let st=full;
+  if(tr){p.push(r3(tr,st),'triệu');st=true}
+  if(ng){p.push(r3(ng,st),'nghìn');st=true}
+  if(dv)p.push(r3(dv,st));
+  return p.join(' ');
+}
+function toWords(n){
+  if(!n)return 'không';
+  const ty=Math.floor(n/1e9),rest=n%1e9;
+  if(ty)return toWords(ty)+' tỷ'+(rest?' '+under1e9(rest,true):'');
+  return under1e9(rest,false);
+}
+function moneyWords(n){n=Math.round(+n||0);if(n<=0)return '';const s=toWords(n);return s[0].toUpperCase()+s.slice(1)+' đồng'}
+
+/* ================= storage ================= */
+const KEY='gdntt.v2', CUR='gdntt.v2.current';
+const DEF_KY=[
+  {title:'Phụ trách bộ phận',name:'',show:true},
+  {title:'Người đề nghị thanh toán',name:'',show:true,auto:true},
+  {title:'Kế toán thanh toán',name:'',show:true},
+  {title:'Kế toán trưởng',name:'',show:true},
+  {title:'Thủ trưởng đơn vị',name:'',show:true}];
+const DEF_SET={coQuan:'Học viện Hành chính và Quản trị công',donVi:'Phân hiệu tại thành phố Đà Nẵng',mauSo:'Mẫu số 02/QTHV',
+  kinhGui:'Phó Giám đốc Phụ trách Phân hiệu Học viện Hành chính và Quản trị công tại thành phố Đà Nẵng',
+  mstDonVi:'',nguongTM:5000000,inLogo:false,ndKieu:'mucdich',ky:DEF_KY,kyFont:11,kyGap:20,banKe:true};
+function load(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v):def}catch(e){return def}}
+function store(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+let db=load(KEY,null)||{drafts:[],names:[],depts:[],benefs:[],settings:{}};
+db.settings=Object.assign(structuredClone(DEF_SET),db.settings||{});
+['drafts','names','depts','benefs'].forEach(k=>db[k]=db[k]||[]);
+const S=()=>db.settings;
+const saveDB=()=>store(KEY,db);
+
+function newForm(){return{id:uid(),so:'',ngay:today(),deTrongNgay:false,kinhGui:S().kinhGui,mode:'ca-nhan',
+  nguoi:{ten:'',boPhan:'',stk:'',nh:''},hd:{so:'',ngay:'',benB:'',noiDung:'',giaTri:0,dot:'Thanh toán'},
+  loai:'mua-sam',noiDung:'',soTien:0,autoSum:true,chu:'',chuManual:false,kemTheo:0,kemAuto:true,tamUng:0,hinhThuc:'ck',
+  thuHuong:{ten:'',mst:'',stk:'',nh:''},bb:[],ndAuto:true,thAuto:true,invoices:[],checklist:{},status:'nhap',savedAt:null}}
+let F=Object.assign(newForm(),load(CUR,{}));
+let FILES=[]; // phiên làm việc: {id,name,ext,kind,status,cls,text}
+let dirty=false;
+
+/* ================= checklist & gợi ý ================= */
+const CL={
+ 'mua-sam':['Giấy đề nghị mua sắm / tờ trình được duyệt','Báo giá (từ 3 báo giá nếu quy chế yêu cầu)','Hợp đồng hoặc đơn đặt hàng (nếu có)','Biên bản giao nhận, nghiệm thu','Hóa đơn GTGT / hóa đơn bán hàng'],
+ 'dich-vu':['Văn bản phê duyệt chủ trương','Báo giá','Hợp đồng / đơn đặt hàng dịch vụ','Biên bản nghiệm thu, xác nhận hoàn thành','Hóa đơn GTGT'],
+ 'sua-chua':['Đề xuất sửa chữa được duyệt','Báo giá / dự toán sửa chữa','Hợp đồng (nếu có)','Biên bản kiểm tra hiện trạng, nghiệm thu','Hóa đơn GTGT'],
+ 'hoi-nghi':['Kế hoạch, dự toán được duyệt','Giấy mời / danh sách đại biểu ký nhận','Hợp đồng dịch vụ (nếu có)','Hóa đơn GTGT','Bảng kê chi tiền cho người tham dự (nếu có)'],
+ 'cong-tac':['Quyết định / giấy cử đi công tác','Giấy đi đường có xác nhận nơi đến','Vé tàu xe, máy bay (kèm thẻ lên máy bay)','Hóa đơn tiền phòng nghỉ','Bảng kê thanh toán công tác phí'],
+ 'hop-dong':['Hợp đồng đã ký','Biên bản nghiệm thu khối lượng / hoàn thành','Biên bản thanh lý (lần cuối)','Hóa đơn GTGT','Bảo lãnh tạm ứng / thực hiện hợp đồng (nếu có)'],
+ 'khac':['Văn bản phê duyệt chủ trương','Hóa đơn, chứng từ hợp lệ']};
+const ND={
+ 'mua-sam':['Thanh toán tiền mua văn phòng phẩm phục vụ công tác chuyên môn','Thanh toán tiền mua vật tư, thiết bị'],
+ 'dich-vu':['Thanh toán tiền in ấn tài liệu','Thanh toán tiền thuê dịch vụ'],
+ 'sua-chua':['Thanh toán tiền sửa chữa, bảo dưỡng thiết bị','Thanh toán tiền sửa chữa nhỏ cơ sở vật chất'],
+ 'hoi-nghi':['Thanh toán chi phí tổ chức hội nghị','Thanh toán tiền tiếp khách'],
+ 'cong-tac':['Thanh toán công tác phí đi '],
+ 'hop-dong':[],'khac':[]};
+
+/* ================= nhận diện chứng từ ================= */
+const LIBS={
+  pdf:['https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',()=>window.pdfjsLib],
+  xlsx:['https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js',()=>window.XLSX],
+  docx:['https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js',()=>window.mammoth]};
+const loading={};
+function lib(name){
+  const[src,g]=LIBS[name];if(g())return Promise.resolve(g());
+  return loading[name]||(loading[name]=new Promise((ok,no)=>{const s=document.createElement('script');s.src=src;
+    s.onload=()=>{if(name==='pdf')g().GlobalWorkerOptions.workerSrc=src.replace('pdf.min.js','pdf.worker.min.js');ok(g())};
+    s.onerror=()=>{delete loading[name];no(new Error('Không tải được thư viện đọc file, kiểm tra kết nối mạng'))};document.head.appendChild(s)}));
+}
+async function pdfText(file){
+  const pdfjs=await lib('pdf');const pdf=await pdfjs.getDocument({data:await file.arrayBuffer()}).promise;let out='';
+  for(let i=1;i<=pdf.numPages;i++){const c=await (await pdf.getPage(i)).getTextContent();let lastY=null;
+    for(const it of c.items){const y=it.transform[5];if(lastY!==null&&Math.abs(y-lastY)>3)out+='\n';else if(out&&!/[\s\n]$/.test(out))out+=' ';out+=it.str;lastY=y}
+    out+='\n';}
+  return out.replace(/[ \t]+/g,' ').replace(/ \n/g,'\n');
+}
+async function sheetText(file){const X=await lib('xlsx');const wb=X.read(await file.arrayBuffer(),{type:'array'});
+  return wb.SheetNames.map(n=>'# '+n+'\n'+X.utils.sheet_to_csv(wb.Sheets[n],{FS:'\t',blankrows:false})).join('\n\n')}
+async function docxText(file){const m=await lib('docx');return (await m.extractRawText({arrayBuffer:await file.arrayBuffer()})).value}
+
+function parseXmlInvoices(xml){
+  const doc=new DOMParser().parseFromString(xml,'application/xml');
+  const T=(el,tag)=>{if(!el)return '';const n=el.getElementsByTagNameNS('*',tag)[0];return n?n.textContent.trim():''};
+  const E=(el,tag)=>el?el.getElementsByTagNameNS('*',tag)[0]:null;
+  const list=[...doc.getElementsByTagNameNS('*','DLHDon')];
+  return list.map(dl=>{
+    const tt=E(dl,'TTChung'),nd=E(dl,'NDHDon'),nb=E(nd,'NBan'),nm=E(nd,'NMua'),tto=E(nd,'TToan');
+    const goods=[...(nd?nd.getElementsByTagNameNS('*','HHDVu'):[])].map(h=>T(h,'THHDVu')).filter(Boolean);
+    const truoc=parseMoney(T(tto,'TgTCThue')),thue=parseMoney(T(tto,'TgTThue'));let tong=parseMoney(T(tto,'TgTTTBSo'));if(!tong)tong=truoc+thue;
+    return{id:uid(),kyHieu:(T(tt,'KHMSHDon')+T(tt,'KHHDon')).trim(),so:T(tt,'SHDon'),ngay:T(tt,'NLap').slice(0,10),
+      ban:T(nb,'Ten'),mst:T(nb,'MST'),stk:T(nb,'STKNHang'),nh:T(nb,'TNHang'),mua:T(nm,'MST'),
+      noiDung:goods.length?goods[0]+(goods.length>1?` và ${goods.length-1} mặt hàng khác`:''):'',truoc,thue,tong,src:'xml'};
+  }).filter(v=>v.so||v.tong);
+}
+function parseInvoiceText(t){
+  if(!/H[OÓ]A\s*Đ[OƠ]N/i.test(t))return null;
+  const m=(re)=>{const r=t.match(re);return r?r[1].trim():''};
+  const inv={id:uid(),src:'text'};
+  inv.kyHieu=m(/K[ýy]\s*hi[ệe]u[^:\n]{0,20}:\s*([0-9]?[A-Z0-9]{5,8})\b/i);
+  inv.so=m(/\bS[ốo]\s*(?:h[óo]a\s*đ[ơo]n)?\s*(?:\((?:Invoice\s*)?No\.?\))?\s*[:.]\s*0*(\d{1,8})\b/i);
+  const d=t.match(/Ng[àa]y\s*(?:\(\w+\))?\s*(\d{1,2})\s*th[áa]ng\s*(?:\(\w+\))?\s*(\d{1,2})\s*n[ăa]m\s*(?:\(\w+\))?\s*(\d{4})/i);
+  inv.ngay=d?`${d[3]}-${d[2].padStart(2,'0')}-${d[1].padStart(2,'0')}`:'';
+  const msts=[...t.matchAll(/M[ãa]\s*s[ốo]\s*thu[ếe][^:\d\n]{0,20}:?\s*([\d][\d\s.-]{8,16}\d)/gi)].map(x=>digits(x[1])).filter(x=>[10,12,13].includes(x.length));
+  inv.mst=msts[0]||'';inv.mua=msts[1]||'';
+  inv.ban=m(/(?:Đ[ơo]n\s*v[ịi]\s*b[áa]n(?:\s*h[àa]ng)?|T[êe]n\s*ng[ưu][ờo]i\s*b[áa]n|Ng[ưu][ờo]i\s*b[áa]n(?:\s*h[àa]ng)?)\s*(?:\([^)]*\))?\s*:\s*([^\n]+)/i).replace(/\s*M[ãa] s[ốo] thu[ếe].*$/i,'');
+  inv.tong=parseNum(m(/T[ổo]ng\s*(?:c[ộo]ng\s*)?(?:ti[ềe]n\s*)?thanh\s*to[áa]n[^:\d\n]{0,30}:?\s*([\d][\d.,]*)/i));
+  inv.truoc=parseNum(m(/C[ộo]ng\s*ti[ềe]n\s*h[àa]ng[^:\d\n]{0,30}:?\s*([\d][\d.,]*)/i));
+  inv.thue=parseNum(m(/Ti[ềe]n\s*thu[ếe]\s*(?:GTGT)?[^:\d\n]{0,30}:?\s*([\d][\d.,]*)/i));
+  if(!inv.tong&&inv.truoc)inv.tong=inv.truoc+inv.thue;
+  inv.stk=digits(m(/S[ốo]\s*t[àa]i\s*kho[ảa]n[^:\d\n]{0,20}:?\s*([\d][\d\s.-]{5,24})/i));
+  inv.nh=m(/S[ốo]\s*t[àa]i\s*kho[ảa]n[^\n]*?(?:t[ạa]i|-)\s*((?:Ng[âa]n\s*h[àa]ng|NH)[^\n]+)/i);
+  inv.noiDung='';
+  return (inv.so||inv.tong)?inv:null;
+}
+/* ---- nhận diện hợp đồng ---- */
+const LABEL_RE=/^(?:[-+•*–]\s*)?(?:Đ[ạa]i\s*di[ệe]n|Ch[ứu]c\s*v[ụu]|Đ[ịi]a\s*ch[ỉi]|Tr[ụu]\s*s[ởo]|Đi[ệe]n\s*tho[ạa]i|S[ốo]\s*đi[ệe]n|Fax|Email|E-mail|M[ãa]\s*s[ốo]|MST|S[ốo]\s*t[àa]i\s*kho[ảa]n|STK|T[àa]i\s*kho[ảa]n|T[ạa]i\s*ng[âa]n|Ng[âa]n\s*h[àa]ng|M[ởo]\s*t[ạa]i|Gi[ấa]y\s*(?:ch[ứu]ng|ph[ée]p|đăng)|Theo\s*gi[ấa]y|S[ốo]\s*CCCD|CCCD|CMND|Website|Ủy\s*quy[ềe]n|Theo\s*(?:văn|quy))/i;
+const ORG_RE=/^(?:[-+•*–]\s*)?(?:C[ÔôOo]NG\s*TY|C[ôo]ng\s*ty|CTY|H[ỘộOo]\s*KINH\s*DOANH|H[ộo]\s*kinh\s*doanh|DOANH\s*NGHI[ỆE]P|Doanh\s*nghi[ệe]p|DNTN|C[ỬU]A\s*H[ÀA]NG|C[ửu]a\s*h[àa]ng|TRUNG\s*T[ÂA]M|Trung\s*t[âa]m|CHI\s*NH[ÁA]NH|Chi\s*nh[áa]nh|C[ƠO]\s*S[ỞO]|C[ơo]\s*s[ởo]|LI[ÊE]N\s*DANH|Li[êe]n\s*danh|H[ỢO]P\s*T[ÁA]C\s*X[ÃA]|H[ợo]p\s*t[áa]c\s*x[ãa]|NH[ÀA]\s*S[ÁA]CH|Nh[àa]\s*s[áa]ch|VI[ỆE]N|Vi[ệe]n|TR[ƯU][ỜO]NG|Tr[ưu][ờo]ng)\b/;
+const isAllCaps=x=>x===x.toUpperCase()&&/[A-ZÀ-Ỹ]/.test(x);
+function cleanName(x){
+  x=String(x||'').replace(/\((?:[^()]*?)(?:g[ọo]i|vi[ếe]t)\s*t[ắa]t[^()]*\)|\((?:[^()]*?)sau\s*đ[âa]y[^()]*\)|\(\s*B[êe]n\s*[AB][^()]*\)/gi,'')
+    .replace(/^[\s\-+•*–:.,;]+/,'')
+    .replace(/^(?:T[êe]n\s*(?:đ[ơo]n\s*v[ịi]|c[ôo]ng\s*ty|t[ổo]\s*ch[ứu]c|doanh\s*nghi[ệe]p|nh[àa]\s*th[ầa]u|nh[àa]\s*cung\s*c[ấa]p|c[ơo]\s*s[ởo]|h[ộo]\s*kinh\s*doanh|ng[ưu][ờo]i\s*b[áa]n|giao\s*d[ịi]ch|b[êe]n\s*b)?|Đ[ơo]n\s*v[ịi]|Nh[àa]\s*th[ầa]u|Nh[àa]\s*cung\s*c[ấa]p|H[ọo]\s*(?:v[àa]\s*)?t[êe]n)\s*:\s*/i,'')
+    .replace(/["“”]/g,'').replace(/\s+/g,' ').replace(/[\s.,;:\-–]+$/,'').trim();
+  return (x.length<3||!/[A-Za-zÀ-ỹ]{2}/.test(x))?'':x;
+}
+function contractDate(txt){
+  const re=/ng[àa]y\s*(\d{1,2})\s*(?:\/|-|th[áa]ng)\s*(\d{1,2})\s*(?:\/|-|n[ăa]m)\s*(\d{4})/gi;
+  const hn=txt.match(/H[ôo]m\s*nay[^\n]{0,40}?ng[àa]y\s*(\d{1,2})\s*(?:\/|-|th[áa]ng)\s*(\d{1,2})\s*(?:\/|-|n[ăa]m)\s*(\d{4})/i);
+  let d=hn;
+  if(!d){const ai=txt.search(/^\s*(?:[\dIVX]+[.)]\s*)?B[ÊE]N\s*A\b/im);const head=ai>0?txt.slice(0,ai):txt.slice(0,2500);
+    const all=[...head.matchAll(re)];d=all.at(-1)||null}
+  return d?`${d[3]}-${String(d[2]).padStart(2,'0')}-${String(d[1]).padStart(2,'0')}`:'';
+}
+function niceText(x){x=String(x||'').replace(/\s+/g,' ').replace(/^[\s:\-–.(]+|[\s:;,.)]+$/g,'').replace(/\s*(?:nh[ưu]\s*sau|c[ụu]\s*th[ểe]\s*nh[ưu]\s*sau)\s*:?$/i,'').trim();
+  if(isAllCaps(x))x=x.toLowerCase();return x}
+const GENERIC_TITLE=/^(?:kinh\s*t[ếe]|mua\s*b[áa]n(?:\s*h[àa]ng\s*h[óo]a)?|d[ịi]ch\s*v[ụu]|cung\s*c[ấa]p\s*d[ịi]ch\s*v[ụu]|thi\s*c[ôo]ng(?:\s*x[âa]y\s*d[ựu]ng)?|giao\s*kho[áa]n|thu[êe]\s*kho[áa]n|nguy[êe]n\s*t[ắa]c|t[ưu]\s*v[ấa]n|s[ửu]a\s*ch[ữu]a|x[âa]y\s*l[ắa]p|c[ủu]a\s*h[àa]ng)?$/i;
+function workSentence(L){
+  const flat=' '+L.join(' ').replace(/\s+/g,' ')+' ';
+  const END='(?=\\.\\s|;|\\s[\\da-z][.)]\\s|\\sĐi[ềe]u\\s*\\d|:\\s|\\s(?:v[ớo]i|theo)\\s*(?:c[áa]c|đ[úu]ng|b[ảa]ng|ph[ụu]\\s*l[ụu]c|danh\\s*m[ụu]c|y[êe]u\\s*c[ầa]u|th[ôo]ng\\s*s[ốo]|n[ộo]i\\s*dung|chi\\s*ti[ếe]t|đi[ềe]u\\s*ki[ệe]n|chuy[êe]n\\s*đ[ềe]|h[ọo]c\\s*ph[ầa]n|m[ôo]n\\s*h[ọo]c|b[àa]i\\s*gi[ảa]ng)|\\sc[ụu]\\s*th[ểe]|\\snh[ưu]\\s*sau|\\.$)';
+  const VERB='(gi[ảa]ng\\s*d[ạa]y|bi[êe]n\\s*so[ạa]n|b[áa]o\\s*c[áa]o|cung\\s*c[ấa]p|thi\\s*c[ôo]ng|l[ắa]p\\s*đ[ặa]t|s[ửu]a\\s*ch[ữu]a|b[ảa]o\\s*d[ưu][ỡo]ng|b[ảa]o\\s*tr[ìi]|in(?:\\s*[ấa]n)?|may|thi[ếe]t\\s*k[ếe]|t[ưu]\\s*v[ấa]n|v[ậa]n\\s*chuy[ểe]n|c[ảa]i\\s*t[ạa]o|x[âa]y\\s*d[ựu]ng|t[ổo]\\s*ch[ứu]c|cho\\s*thu[êe]|b[áa]n|l[àa]m|th[ựu]c\\s*hi[ệe]n)';
+  const pats=[
+    // Bên A giao/thuê/đặt Bên B (thực hiện) ...
+    new RegExp('B[êe]n\\s*A\\s*(?:đ[ồo]ng\\s*[ýy]\\s*)?(?:giao\\s*(?:cho\\s*)?|đ[ặa]t\\s*(?:h[àa]ng\\s*)?(?:cho\\s*|v[ớo]i\\s*)?|thu[êe]\\s*|k[ýy]\\s*k[ếe]t\\s*v[ớo]i\\s*|m[ờo]i\\s*|nh[ờo]\\s*|đ[ềe]\\s*ngh[ịi]\\s*)B[êe]n\\s*B\\s*(?:đ[ồo]ng\\s*[ýy]\\s*)?(?:th[ựu]c\\s*hi[ệe]n\\s*(?:vi[ệe]c\\s*)?|nh[ậa]n\\s*(?:th[ựu]c\\s*hi[ệe]n\\s*)?|l[àa]m\\s*)?(.{6,500}?)'+END,'i'),
+    // Bên B (đồng ý) (nhận) VERB ...
+    new RegExp('B[êe]n\\s*B\\s*(?:đ[ồo]ng\\s*[ýy]\\s*)?(?:nh[ậa]n\\s*)?(?:th[ựu]c\\s*hi[ệe]n\\s*vi[ệe]c\\s*)?'+VERB+'\\s*(?:cho\\s*B[êe]n\\s*A\\s*)?(.{4,500}?)'+END,'i')];
+  let m=flat.match(pats[0]);
+  if(m){let x=m[1].replace(/^vi[ệe]c\s*/i,'');return x}
+  m=flat.match(pats[1]);
+  if(m){let v=m[1].toLowerCase().replace(/\s+/g,' ');if(v==='bán')v='cung cấp';if(v==='thực hiện'||v==='làm')v='';return (v?v+' ':'')+m[2]}
+  return '';
+}
+function contractSubject(L){
+  const top=L.slice(0,60);
+  const w=niceText(workSentence(L).replace(/\s*cho\s*B[êe]n\s*A\b/gi,''));if(w.length>8)return w;
+  for(const x of top){const m=x.match(/(?:^|\(|\s)(?:V\/v|V[ềe]\s*vi[ệe]c)\s*[:.]?\s*(.+)/i);if(m&&niceText(m[1]).length>5)return niceText(m[1])}
+  for(const x of L){const m=x.match(/^(?:[-+•*]\s*)?(?:T[êe]n\s*)?g[óo]i\s*th[ầa]u\s*:\s*(.+)/i);if(m&&niceText(m[1]).length>5)return niceText(m[1])}
+  for(let i=0;i<Math.min(top.length,40);i++){const m=top[i].match(/^H[ỢO]P\s*Đ[ỒO]NG\b\s*(.*)$/i);
+    if(m&&isAllCaps(top[i])){let rest=m[1].replace(/\bs[ốo]\s*:.*$/i,'').trim();
+      if((!rest||GENERIC_TITLE.test(rest))&&top[i+1]&&isAllCaps(top[i+1])&&!/^S[ỐO]\b/.test(top[i+1]))rest=(rest+' '+top[i+1]).trim();
+      const r=niceText(rest);if(r&&!GENERIC_TITLE.test(r))return r}}
+  const d1=L.findIndex(x=>/^(?:[^\wÀ-ỹ]*\s*)?Đi[ềe]u\s*1\b/i.test(x));
+  if(d1>=0){const blk=L.slice(d1,d1+8).filter(x=>!/^Hai\s*b[êe]n/i.test(x)).join('\n').replace(/^[^\wÀ-ỹ]+/,'');
+    const m=blk.match(/^Đi[ềe]u\s*1\s*[.:]?\s*(?:N[ộo]i\s*dung[^:\n]*|Đ[ốo]i\s*t[ưu][ợo]ng[^:\n]*|Ph[ạa]m\s*vi[^:\n]*)\s*:?\s*([^\n]{6,160}?)(?:[.;\n]|$)/i);
+    if(m&&!/^(?:B[êe]n|Hai\s*b[êe]n)/i.test(m[1]))return niceText(m[1]);}
+  return '';
+}
+function partyBlock(L,ch){
+  const head=new RegExp('^(?:[\\dIVX]+[.)]\\s*)?B[ÊEêe]N\\s*'+ch+'\\b\\s*(?:\\(|:|-|–|$)','i'),alias=new RegExp('\\(\\s*(?:sau\\s*đ[âa]y\\s*)?(?:g[ọo]i\\s*(?:t[ắa]t\\s*)?l[àa]\\s*)?["“]?\\s*B[êe]n\\s*'+ch+'\\s*["”]?\\s*\\)','i');
+  let i=L.findIndex(x=>head.test(x)&&!/\bv[àa]\s*B[êe]n\b/i.test(x)&&x.length<160);
+  if(i<0)i=L.findIndex(x=>alias.test(x));
+  if(i<0)return null;
+  let j=i+1;while(j<L.length&&j<i+18&&!/^(?:[\dIVX]+[.)]\s*)?B[ÊEêe]N\s*[A-Z]\b/i.test(L[j])&&!/^Đi[ềe]u\s*\d/i.test(L[j])&&!/^(?:Hai|C[áa]c)\s*b[êe]n|^Sau\s*khi|^C[ùu]ng\s*th[ỏo]a/i.test(L[j]))j++;
+  return{head:L[i],lines:L.slice(i+1,j),alias:alias.test(L[i])};
+}
+const ROLE_RE=/^(?:gi[ảa]ng\s*vi[êe]n(?:\s*(?:gi[ảa]ng\s*b[àa]i|th[ỉi]nh\s*gi[ảa]ng|m[ờo]i|ki[êe]m\s*nhi[ệe]m))?|b[áa]o\s*c[áa]o\s*vi[êe]n|chuy[êe]n\s*gia|ng[ưu][ờo]i\s*(?:nh[ậa]n|th[ựu]c\s*hi[ệe]n|b[áa]n|cung\s*c[ấa]p|cho\s*thu[êe]|lao\s*đ[ộo]ng)[^]*|b[êe]n\s*(?:b[áa]n|mua|nh[ậa]n(?:\s*kho[áa]n)?|giao(?:\s*kho[áa]n)?|cung\s*c[ấa]p(?:\s*d[ịi]ch\s*v[ụu])?|cho\s*thu[êe]|thu[êe]|th[ựu]c\s*hi[ệe]n|nh[ậa]n\s*th[ầa]u|s[ửu]\s*d[ụu]ng\s*d[ịi]ch\s*v[ụu])|nh[àa]\s*(?:th[ầa]u|cung\s*c[ấa]p)|đ[ơo]n\s*v[ịi]\s*(?:th[ựu]c\s*hi[ệe]n|cung\s*c[ấa]p|t[ưu]\s*v[ấa]n|thi\s*c[ôo]ng)|c[ộo]ng\s*t[áa]c\s*vi[êe]n|t[áa]c\s*gi[ảa])$/i;
+const isRole=x=>ROLE_RE.test(norm2(x));
+function norm2(x){return String(x||'').replace(/[()"“”:]/g,' ').replace(/\s+/g,' ').trim().toLowerCase()}
+const PERSON_TAIL=/\s*(?:[,;–\-]\s*|\s{2,}|\s+)(?:Ch[ứu]c\s*v[ụu]|Sinh\s*(?:n[ăa]m|ng[àa]y)|N[ăa]m\s*sinh|Ng[àa]y\s*sinh|S[ốo]\s*CCCD|CCCD|CMND|Đi[ệe]n\s*tho[ạa]i|H[ọo]c\s*h[àa]m|H[ọo]c\s*v[ịi]|Đ[ơo]n\s*v[ịi]\s*c[ôo]ng\s*t[áa]c|C[ơo]\s*quan|Gi[ảa]ng\s*vi[êe]n\b|M[ãa]\s*s[ốo]\s*thu[ếe]|MST|Đ[ịi]a\s*ch[ỉi]|S[ốo]\s*t[àa]i\s*kho[ảa]n|STK).*$/i;
+function personName(x){
+  const m=String(x).match(/^(?:[-+•*–]\s*)?(?:(?:[ÔôOo]ng\s*\(\s*B[àa]\s*\)|(?:[ÔôOo]ng|B[àa])(?:\s*\/\s*(?:[ÔôOo]ng|B[àa]))?)\s*[:.]?|(?:H[ọo]\s*(?:v[àa]\s*)?t[êe]n(?:\s*gi[ảa]ng\s*vi[êe]n)?|Gi[ảa]ng\s*vi[êe]n|Chuy[êe]n\s*gia|B[áa]o\s*c[áa]o\s*vi[êe]n)\s*:)\s*(.+)$/i);
+  if(!m)return '';
+  let v=m[1].replace(PERSON_TAIL,'').replace(/^(?:[ÔôOo]ng|B[àa])\s+/,'');
+  v=cleanName(v);
+  return v&&/[A-ZÀ-Ỹ]/.test(v)&&v.split(' ').length>=2&&!isRole(v)?v:'';
+}
+function partyName(pb){
+  if(!pb)return '';
+  const h=pb.head;
+  if(pb.alias&&!/^(?:[\dIVX]+[.)]\s*)?B[ÊEêe]N\s*[AB]\b/i.test(h))return cleanName(h.split(/\(/)[0]);
+  let afterColon=h.includes(':')?cleanName(h.slice(h.indexOf(':')+1)):'';
+  const p0=afterColon?personName(afterColon)||'':'';if(p0)return p0;
+  if(afterColon)afterColon=afterColon.replace(PERSON_TAIL,'').trim();
+  if(afterColon&&!LABEL_RE.test(afterColon)&&!isRole(afterColon))return afterColon;
+  for(const x of pb.lines){const m=x.match(/^(?:[-+•*–]\s*)?(?:T[êe]n\s*(?:đ[ơo]n\s*v[ịi]|c[ôo]ng\s*ty|t[ổo]\s*ch[ứu]c|doanh\s*nghi[ệe]p|nh[àa]\s*th[ầa]u|nh[àa]\s*cung\s*c[ấa]p|c[ơo]\s*s[ởo]|h[ộo]\s*kinh\s*doanh|ng[ưu][ờo]i\s*b[áa]n|giao\s*d[ịi]ch)|Đ[ơo]n\s*v[ịi](?:\s*(?:b[áa]n|cung\s*c[ấa]p))?|Nh[àa]\s*th[ầa]u|Nh[àa]\s*cung\s*c[ấa]p)\s*:\s*(.+)/i);
+    if(m&&cleanName(m[1])&&!isRole(m[1]))return cleanName(m[1])}
+  for(const x of pb.lines)if(ORG_RE.test(x)&&!/^(?:[-+•*–]\s*)?Đ[ạa]i\s*di[ệe]n/i.test(x)&&cleanName(x))return cleanName(x).replace(PERSON_TAIL,'');
+  for(const x of pb.lines){if(/^(?:[-+•*–]\s*)?Đ[ạa]i\s*di[ệe]n/i.test(x))continue;const n=personName(x);if(n)return n}
+  for(const x of pb.lines){const c=cleanName(x);if(c&&!LABEL_RE.test(x.replace(/^[-+•*–\s]+/,''))&&!isRole(c)&&c.split(' ').length>=2)return c.replace(PERSON_TAIL,'')}
+  return '';
+}
+function contractNo(L){
+  const TOK="([.…_\\-]*\\d[^\\s,;()/]*(?:\\s*\\/\\s*[^\\s,;()/]+)*|[.…_]{2,}\\s*\\/\\s*[^\\s,;()/]+(?:\\s*\\/\\s*[^\\s,;()/]+)*)";
+  const NOT="(?!\\s*(?:t[àa]i|đi[ệe]n|l[ưu][ợo]ng|ti[ềe]n|fax|cccd|cmnd|nh[àa]|đ[ăa]ng|hi[ệe]u|th[ứu]|ch[ứu]ng|gi[ấa]y|seri|serial))";
+  const res=[new RegExp('H[ợo]p\\s*đ[ồo]ng[^\\n]{0,50}?\\bs[ốo]\\s*[:.]?\\s*'+TOK,'i'),
+    new RegExp('(?:^|[\\s(])S[ốo]'+NOT+'\\s*(?:h[ợo]p\\s*đ[ồo]ng|H[ĐD])?\\s*[:.]\\s*'+TOK,'i'),
+    new RegExp('^S[ốo]'+NOT+'\\s+'+TOK,'i')];
+  for(const re of res)for(const x of L.slice(0,80)){const m=x.match(re);if(!m)continue;
+    let v=m[1].replace(/\s*\/\s*/g,'/').replace(/^[.…_\-]+/,'…').replace(/[.,;:]+$/,'');
+    if(/^\d{1,2}\/\d{1,2}\/\d{4}$/.test(v))continue;
+    if(/\d/.test(v)||v.includes('/'))return v}
+  return '';
+}
+function parseBienBan(t){
+  const L=t.split(/\n/).map(x=>x.replace(/\s+/g,' ').trim()).filter(Boolean);
+  const h=L.slice(0,25).find(x=>/^BI[ÊE]N\s*B[ẢA]N\b/i.test(x)&&/NGHI[ỆE]M\s*THU|THANH\s*L[ÝY]|B[ÀA]N\s*GIAO/i.test(x+' '+(L[L.indexOf(x)+1]||'')));
+  if(!h)return null;
+  const both=h+' '+(L[L.indexOf(h)+1]||'');
+  const loai=/THANH\s*L[ÝY]/i.test(both)?'thanh lý':/NGHI[ỆE]M\s*THU/i.test(both)?'nghiệm thu':'giao nhận';
+  const flat=L.join('\n');
+  const so=((flat.match(/H[ợo]p\s*đ[ồo]ng\s*(?:kinh\s*t[ếe]\s*|mua\s*b[áa]n\s*|d[ịi]ch\s*v[ụu]\s*)?s[ốo]\s*:?\s*([0-9][0-9A-Za-zÀ-ỹĐđ._\-]*(?:\s*\/\s*[0-9A-Za-zÀ-ỹĐđ._\-]+)*)/i)||[])[1]||'').replace(/\s*\/\s*/g,'/');
+  return{loai,ngay:contractDate(t),so};
+}
+function bankOf(seg){
+  const BANK='((?:Ng[âa]n\\s*h[àa]ng|NH\\b|Kho\\s*b[ạa]c|KBNN|Vietcombank|Vietinbank|VietinBank|BIDV|Agribank|Techcombank|MB\\b|MBBank|ACB|Sacombank|VPBank|TPBank|SHB|HDBank|VIB|OCB|SeABank|LienVietPostBank|LPBank|Eximbank|MSB|Nam\\s*A|Bắc\\s*Á|Đông\\s*Á|SCB|PVcomBank|BaoVietBank|Kienlongbank|ABBank|NCB|VietBank|Saigonbank|Co-opBank)[^\\n]*)';
+  const pats=[
+    new RegExp('(?:S[ốo]\\s*t[àa]i\\s*kho[ảa]n|S[ốo]\\s*TK|STK|T[àa]i\\s*kho[ảa]n(?:\\s*s[ốo])?)[^\\n]*?\\d[\\d\\s.]*\\s*(?:[,;–\\-]\\s*)?(?:(?:m[ởo]\\s*)?t[ạa]i\\s*:?\\s*|(?:T[êe]n\\s*)?ng[âa]n\\s*h[àa]ng\\s*:\\s*)?'+BANK,'i'),
+    new RegExp('(?:S[ốo]\\s*t[àa]i\\s*kho[ảa]n|S[ốo]\\s*TK|STK|T[àa]i\\s*kho[ảa]n(?:\\s*s[ốo])?)[^\\n]*?\\d\\s*(?:[,;–\\-]\\s*)?(?:m[ởo]\\s*)?t[ạa]i\\s*:?\\s*([^\\n]{3,})','i'),
+    /^(?:[-+•*–]\s*)?(?:T[êe]n\s*ng[âa]n\s*h[àa]ng|T[ạa]i\s*ng[âa]n\s*h[àa]ng|T[ạa]i\s*NH|M[ởo]\s*t[ạa]i(?:\s*ng[âa]n\s*h[àa]ng)?|T[ạa]i|Ng[âa]n\s*h[àa]ng|N[ơo]i\s*m[ởo](?:\s*t[àa]i\s*kho[ảa]n)?)\s*:\s*([^\n]+)/im,
+    new RegExp('^(?:[-+•*–]\\s*)?'+BANK,'im')];
+  for(const re of pats){const m=seg.match(re);if(m){let v=m[1].replace(/\s{2,}.*$/,'').replace(/^ng[âa]n\s*h[àa]ng\s*:\s*/i,'').replace(/[.;,]+$/,'').trim();if(v.length>=3)return v}}
+  return '';
+}
+function parseContract(t){
+  if(!/H[ỢO]P\s*Đ[ỒO]NG/i.test(t)||!/B[ÊE]N\s*B/i.test(t))return null;
+  const L=t.split(/\n/).map(x=>x.replace(/\t+/g,' ').replace(/\s+/g,' ').trim()).filter(Boolean);
+  const c={};
+  const top=L.slice(0,40).join('\n');
+  c.so=contractNo(L);
+  c.ngay=contractDate(t);
+  const pb=partyBlock(L,'B');
+  c.benB=partyName(pb);
+  const seg=pb?[pb.head,...pb.lines].join('\n'):'';
+  c.stk=digits((seg.match(/(?:S[ốo]\s*t[àa]i\s*kho[ảa]n|S[ốo]\s*TK|STK|T[àa]i\s*kho[ảa]n)[^:\d\n]{0,25}:?\s*([\d][\d\s.]{5,24})/i)||[])[1]);
+  c.nh=bankOf(seg);
+  c.mst=digits((seg.match(/(?:M[ãa]\s*s[ốo]\s*thu[ếe]|MST|M[ãa]\s*s[ốo]\s*doanh\s*nghi[ệe]p)[^:\d\n]{0,15}:?\s*([\d][\d\s.-]{8,16}\d)/i)||[])[1]);
+  c.giaTri=parseNum((t.match(/(?:T[ổo]ng\s*)?gi[áa]\s*tr[ịi]\s*(?:c[ủu]a\s*)?h[ợo]p\s*đ[ồo]ng[^:\d\n]{0,60}:?\s*([\d][\d.,]{3,})/i)||t.match(/T[ổo]ng\s*(?:c[ộo]ng\s*)?(?:gi[áa]\s*tr[ịi]|ti[ềe]n\s*thanh\s*to[áa]n)[^:\d\n]{0,40}:?\s*([\d][\d.,]{3,})/i)||[])[1]);
+  c.noiDung=contractSubject(L);
+  return (c.benB||c.so)?c:null;
+}
+function invKey(i){return digits(i.mst)+'|'+String(i.kyHieu||'').toUpperCase()+'|'+String(i.so||'').replace(/^0+/,'')}
+function addInvoice(inv){
+  const k=invKey(inv),ex=F.invoices.find(x=>invKey(x)===k&&inv.so);
+  if(ex){Object.keys(inv).forEach(p=>{if(p!=='id'&&!ex[p]&&inv[p])ex[p]=inv[p]});return false}
+  F.invoices.push(Object.assign({kyHieu:'',so:'',ngay:'',ban:'',mst:'',mua:'',stk:'',nh:'',noiDung:'',truoc:0,thue:0,tong:0},inv));return true;
+}
+function fillBenefFrom(src){
+  if(F.thuHuong.ten)return;
+  F.thuHuong.ten=src.ban||src.benB||'';F.thuHuong.mst=digits(src.mst);
+  F.thuHuong.stk=digits(src.stk);F.thuHuong.nh=src.nh||'';
+  const c=matchBenef(F.thuHuong.ten,F.thuHuong.mst);if(c){F.thuHuong.stk=F.thuHuong.stk||c.stk;F.thuHuong.nh=F.thuHuong.nh||c.nh}
+}
+function extOf(n){return (n.split('.').pop()||'').toLowerCase()}
+async function handleFiles(list){
+  for(const file of list){
+    const ext=extOf(file.name),fe={id:uid(),name:file.name,ext,status:'Đang đọc…',cls:'',text:''};
+    FILES.push(fe);renderFiles();
+    try{
+      let text='';
+      if(ext==='xml'){text=await file.text();const invs=parseXmlInvoices(text);
+        if(invs.length){let n=0;invs.forEach(v=>{if(addInvoice(v))n++;fillBenefFrom(v)});fe.kind='invoice';
+          const v=invs[0];fe.status=`Hóa đơn số ${v.so||'?'} · ${v.ban||''} · ${fmt(v.tong)} đ`+(n?'':' (đã có, đã gộp thông tin)');fe.cls='ok';}
+        else{fe.status='File XML không phải hóa đơn điện tử, đã lưu văn bản';fe.cls='warn'}}
+      else if(ext==='pdf')text=await pdfText(file);
+      else if(['xlsx','xls','xlsm'].includes(ext))text=await sheetText(file);
+      else if(ext==='docx')text=await docxText(file);
+      else if(ext==='doc'){fe.status='File .doc định dạng cũ không đọc được, mở bằng Word và lưu thành .docx';fe.cls='err'}
+      else text=await file.text();
+      fe.text=text;
+      if(fe.kind!=='invoice'&&fe.cls!=='err'){
+        if(ext==='pdf'&&text.replace(/\s/g,'').length<40){fe.status='PDF dạng ảnh scan, không có lớp chữ để đọc. Nhập hóa đơn thủ công.';fe.cls='warn'}
+        else{
+          const bb=parseBienBan(text);
+          const inv=bb?null:parseInvoiceText(text),ct=bb?null:parseContract(text);
+          if(bb){fe.kind='bb';F.bb=(F.bb||[]).filter(x=>x.fid!==fe.id);F.bb.push({fid:fe.id,loai:bb.loai,ngay:bb.ngay});
+            if(bb.so&&(!F.hd.so||F.hd.so.startsWith('…')))F.hd.so=bb.so;
+            if(bb.loai==='thanh lý'&&(F.hd.dot==='Thanh toán'||!F.hd.dot))F.hd.dot='Thanh toán lần cuối và thanh lý';
+            fe.status=`Biên bản ${bb.loai}${bb.ngay?' ngày '+vnDate(bb.ngay):''}${bb.so?' · HĐ số '+bb.so:''}`;fe.cls='ok'}
+          else if(inv&&!ct){addInvoice(inv);fillBenefFrom(inv);fe.kind='invoice';fe.status=`Hóa đơn số ${inv.so||'?'} · ${fmt(inv.tong)} đ — nên đối chiếu lại`;fe.cls='ok'}
+          else if(ct){fe.kind='contract';
+            const bogus=v=>!v||cleanName(v)==='';
+            ['so','ngay','noiDung'].forEach(k=>{if((bogus(F.hd[k])||k==='noiDung')&&ct[k])F.hd[k]=ct[k]});
+            if(ct.benB)F.hd.benB=ct.benB;if(ct.giaTri)F.hd.giaTri=ct.giaTri;
+            F.mode='hop-dong';if(F.loai==='mua-sam')F.loai='hop-dong';
+            if(!F.invoices.length&&!F.soTien&&F.hd.giaTri&&F.hd.dot!=='Tạm ứng'){F.soTien=F.hd.giaTri;F.stSrc='hd'}
+            if(ct.benB&&(F.thAuto||!F.thuHuong.ten||bogus(F.thuHuong.ten))){F.thuHuong={ten:'',mst:'',stk:'',nh:''};fillBenefFrom({benB:ct.benB,mst:ct.mst,stk:ct.stk,nh:ct.nh});F.thAuto=true}
+            fe.status=`Hợp đồng${ct.so?' số '+ct.so:''}${ct.benB?' · Bên B: '+ct.benB:''}${ct.noiDung?' · '+ct.noiDung:''}`;fe.cls=ct.benB?'ok':'warn';
+            if(!ct.benB)fe.status+=' — chưa nhận ra tên Bên B, nhập tay giúp'}
+          else{fe.status='Đã đọc văn bản, không thấy hóa đơn hay hợp đồng';fe.cls=''}
+        }
+      }
+    }catch(e){fe.status=e.message||'Không đọc được file';fe.cls='err'}
+    compute();autoContent();changed();syncInputs();renderAll();
+  }
+}
+
+/* ================= tính toán tự động ================= */
+const sumInv=k=>F.invoices.reduce((a,i)=>a+(+i[k]||0),0);
+function compute(){
+  if(F.autoSum&&F.invoices.length)F.soTien=sumInv('tong');
+  if(!F.chuManual)F.chu=moneyWords(F.soTien);
+  if(F.kemAuto)F.kemTheo=F.invoices.length+FILES.filter(f=>f.kind==='contract').length;
+}
+function matchBenef(ten,mst){const n=norm(ten),m=digits(mst);
+  return db.benefs.find(b=>(m&&digits(b.mst)===m)||(n&&norm(b.ten)===n))}
+
+/* ================= bind ô nhập ================= */
+function syncInputs(){
+  $$('[data-k]').forEach(el=>{
+    const v=get(F,el.dataset.k);
+    if(el.type==='radio')el.checked=(el.value===v);
+    else if(el.type==='checkbox')el.checked=!!v;
+    else if(document.activeElement!==el)el.value=el.dataset.type==='money'?(v?fmt(v):''):(v??'');
+  });
+  $$('[data-s]').forEach(el=>{const v=S()[el.dataset.s];
+    if(el.type==='checkbox')el.checked=!!v;else if(document.activeElement!==el)el.value=el.dataset.type==='money'?(v?fmt(v):''):(v??'')});
+}
+function syncAuto(){
+  for(const k of ['soTien','chu','kemTheo']){const el=$(`[data-k="${k}"]`);if(el&&document.activeElement!==el)el.value=k==='soTien'?(F.soTien?fmt(F.soTien):''):F[k]}
+  $('[data-k="autoSum"]').checked=F.autoSum;
+}
+function onField(el){
+  const k=el.dataset.k;let v;
+  if(el.type==='checkbox')v=el.checked;
+  else if(el.type==='radio'){if(!el.checked)return;v=el.value}
+  else if(el.dataset.type==='money'){v=moneyIn(el.value);const pos=el.value.length-el.selectionEnd;el.value=v?fmt(v):'';try{el.setSelectionRange(el.value.length-pos,el.value.length-pos)}catch(e){}}
+  else if(el.type==='number')v=parseInt(el.value,10)||0;
+  else v=el.value;
+  set(F,k,v);
+  if(k==='soTien'){F.autoSum=false;F.stSrc='';autoContent();syncInputs()}
+  if(k==='chu')F.chuManual=!!v.trim();
+  if(k==='kemTheo')F.kemAuto=false;
+  if(k==='autoSum'&&v&&!F.invoices.length)toast('Chưa có hóa đơn nào để cộng');
+  if(k==='nguoi.ten'){const p=db.names.find(x=>norm(x.ten)===norm(v));if(p){if(!F.nguoi.boPhan)F.nguoi.boPhan=p.boPhan||'';if(!F.nguoi.stk)F.nguoi.stk=p.stk||'';if(!F.nguoi.nh)F.nguoi.nh=p.nh||'';syncInputs()}}
+  if(k==='noiDung')F.ndAuto=!v.trim()?true:false;
+  if(k==='thuHuong.ten')F.thAuto=!v.trim();
+  if(k.startsWith('hd.')||k==='mode'){if(k==='hd.benB'||k==='mode')autoBenefFromContract();autoContent();syncInputs();renderChips()}
+  if(k==='thuHuong.ten'){const b=matchBenef(v,'');if(b&&!F.thuHuong.stk){Object.assign(F.thuHuong,{stk:b.stk,nh:b.nh,mst:b.mst||F.thuHuong.mst});syncInputs()}}
+  changed();
+  if(['mode','loai','hinhThuc','tamUng','nguoi.ten','nguoi.boPhan','thuHuong.ten','thuHuong.stk','hd.so','hd.benB','hd.noiDung'].includes(k))renderSide();
+  else renderSums();
+}
+function onSetting(el){
+  const k=el.dataset.s;let v=el.type==='checkbox'?el.checked:el.type==='range'?+el.value:el.dataset.type==='money'?moneyIn(el.value):el.value;
+  if(el.dataset.type==='money')el.value=v?fmt(v):'';
+  S()[k]=v;saveDB();renderPreview();renderRanges();
+}
+const isToggle=el=>el.type==='radio'||el.type==='checkbox'||el.tagName==='SELECT';
+document.addEventListener('input',e=>{const el=e.target;if(isToggle(el)&&!el.closest('.inv'))return;
+  if(el.matches('[data-k]'))onField(el);else if(el.matches('[data-s]'))onSetting(el);
+  else if(el.closest('.inv'))onInvField(el);else if(el.closest('.ky'))onKyField(el);
+  else if(el.id==='qDraft')renderDrafts();});
+document.addEventListener('change',e=>{const el=e.target;
+  if(el.matches('[data-k]')&&(el.type==='radio'||el.type==='checkbox'||el.tagName==='SELECT'))onField(el);
+  else if(el.matches('[data-s]')&&el.type==='checkbox')onSetting(el);
+  else if(el.closest('.ky')&&el.type==='checkbox')onKyField(el);
+  else if(el.closest('#checklist')){F.checklist[el.value]=el.checked;changed();}
+  else if(el.name==='flt')renderDrafts();});
+
+let saveT;
+function changed(){
+  dirty=true;compute();syncAuto();renderPreview();renderMeter();renderStatus();renderBadges();
+  clearTimeout(saveT);saveT=setTimeout(()=>store(CUR,F),400);
+}
+
+/* ================= render: panel ================= */
+function renderAll(){renderSide();renderDrafts();renderCatalog();renderRanges();renderPreview();renderMeter();renderStatus()}
+function renderSide(){
+  $$('[data-mode]').forEach(el=>el.hidden=el.dataset.mode!==F.mode);
+  $('#lbStk').textContent=F.hinhThuc==='tm'?'Số tài khoản (không bắt buộc)':'Số tài khoản';
+  $('#lbStk').classList.toggle('req',F.hinhThuc!=='tm');
+  renderFiles();renderInvoices();renderChecklist();renderChips();renderKy();renderCalc();renderSums();
+}
+function renderFiles(){
+  const tag=e=>({pdf:'pdf',xml:'xml',xlsx:'xls',xls:'xls',xlsm:'xls',csv:'xls',docx:'doc',doc:'doc'}[e]||'');
+  $('#fileList').innerHTML=FILES.map(f=>`<li><span class="ftype ${tag(f.ext)}">${esc(f.ext.toUpperCase())}</span>
+    <div class="nm"><b title="${esc(f.name)}">${esc(f.name)}</b><small class="${f.cls}">${esc(f.status)}</small></div>
+    <button class="x" data-rmfile="${f.id}" aria-label="Bỏ file">×</button></li>`).join('');
+  const withText=FILES.filter(f=>f.text);
+  $('#textView').hidden=!withText.length;
+  const sel=$('#textSel'),cur=sel.value;
+  sel.innerHTML=withText.map(f=>`<option value="${f.id}">${esc(f.name)}</option>`).join('');
+  if(withText.some(f=>f.id===cur))sel.value=cur;
+  const f=withText.find(x=>x.id===sel.value);$('#textPre').textContent=f?f.text.slice(0,20000):'';
+}
+function renderInvoices(){
+  const box=$('#invList');
+  if(!F.invoices.length){box.innerHTML='<div class="empty">Chưa có hóa đơn. Tải file XML hóa đơn điện tử để điền tự động, hoặc thêm thủ công.</div>';$('#invTotals').innerHTML='';return}
+  const issues=invoiceIssues();
+  box.innerHTML=F.invoices.map((v,i)=>`<div class="inv ${issues[v.id]?'bad':''}" data-inv="${v.id}">
+    <div class="inv-top"><b>${i+1}.</b> ${v.src==='xml'?'Hóa đơn điện tử (XML)':v.src==='text'?'Đọc từ file, cần đối chiếu':'Nhập thủ công'}
+      ${issues[v.id]?`<span style="color:var(--red)">· ${esc(issues[v.id])}</span>`:''}
+      <button class="x" data-rminv="${v.id}" aria-label="Xoá hóa đơn">×</button></div>
+    <div class="g">
+      <div class="c2"><label>Ký hiệu</label><input class="in" data-f="kyHieu" value="${esc(v.kyHieu)}"></div>
+      <div class="c2"><label>Số</label><input class="in num" data-f="so" value="${esc(v.so)}"></div>
+      <div class="c2"><label>Ngày</label><input class="in" type="date" data-f="ngay" value="${esc(v.ngay)}"></div>
+      <div class="c4"><label>Đơn vị bán</label><input class="in" data-f="ban" value="${esc(v.ban)}"></div>
+      <div class="c2"><label>MST bên bán</label><input class="in num" data-f="mst" value="${esc(v.mst)}"></div>
+      <div class="c6"><label>Nội dung hàng hóa, dịch vụ</label><input class="in" data-f="noiDung" value="${esc(v.noiDung)}"></div>
+      <div class="c2 money"><label>Trước thuế</label><input class="in" data-f="truoc" data-type="money" value="${v.truoc?fmt(v.truoc):''}"></div>
+      <div class="c2 money"><label>Thuế GTGT</label><input class="in" data-f="thue" data-type="money" value="${v.thue?fmt(v.thue):''}"></div>
+      <div class="c2 money"><label>Tổng thanh toán</label><input class="in" data-f="tong" data-type="money" value="${v.tong?fmt(v.tong):''}" style="font-weight:600"></div>
+    </div></div>`).join('');
+  renderInvTotals();
+}
+function renderInvTotals(){
+  $('#invTotals').innerHTML=F.invoices.length?`<div class="totals"><span>${F.invoices.length} chứng từ · trước thuế ${fmt(sumInv('truoc'))} · thuế ${fmt(sumInv('thue'))}</span><b class="num">${fmt(sumInv('tong'))} đ</b></div>`:'';
+}
+function invoiceIssues(){
+  const r={},seen={};
+  F.invoices.forEach(v=>{const k=invKey(v);
+    if(v.so&&seen[k])r[v.id]='trùng hóa đơn trong giấy này';seen[k]=1;
+    if(!r[v.id]&&v.so&&submittedKeys().has(k))r[v.id]='đã thanh toán ở hồ sơ khác';
+    if(!r[v.id]&&v.truoc&&v.tong&&Math.abs(v.truoc+v.thue-v.tong)>1)r[v.id]='trước thuế + thuế ≠ tổng';});
+  return r;
+}
+function submittedKeys(){const s=new Set();db.drafts.forEach(d=>{if(d.status==='da-nop'&&d.id!==F.id)(d.invoices||[]).forEach(v=>v.so&&s.add(invKey(v)))});return s}
+function onInvField(el){
+  const card=el.closest('.inv'),v=F.invoices.find(x=>x.id===card.dataset.inv),f=el.dataset.f;if(!v||!f)return;
+  if(el.dataset.type==='money'){v[f]=moneyIn(el.value);el.value=v[f]?fmt(v[f]):'';
+    if((f==='truoc'||f==='thue')&&!v._tongManual)v.tong=(v.truoc||0)+(v.thue||0),card.querySelector('[data-f=tong]').value=v.tong?fmt(v.tong):'';
+    if(f==='tong')v._tongManual=true;}
+  else v[f]=el.value;
+  autoContent();syncInputs();changed();renderInvTotals();renderSums();
+}
+function renderChecklist(){
+  const items=CL[F.loai]||[];
+  $('#checklist').innerHTML=items.map(t=>`<li><label><input type="checkbox" value="${esc(t)}" ${F.checklist[t]?'checked':''}>${esc(t)}</label></li>`).join('');
+}
+function renderChips(){
+  const nm=db.names.slice(0,10);
+  $('#nameChips').innerHTML=nm.map((p,i)=>`<button class="chip ${p.ten===F.nguoi.ten?'on':''}" data-name="${i}" title="${esc(p.boPhan||'')}">${esc(p.ten)}</button>`).join('')+
+    (F.nguoi.ten&&!db.names.some(p=>norm(p.ten)===norm(F.nguoi.ten))?'<button class="link" id="saveName">+ Lưu tên này</button>':'');
+  $('#dlDept').innerHTML=db.depts.map(d=>`<option value="${esc(d)}">`).join('');
+  $('#deptChips').innerHTML=db.depts.slice(0,8).map(d=>`<button class="chip ${d===F.nguoi.boPhan?'on':''}" data-dept="${esc(d)}">${esc(d)}</button>`).join('')+
+    (F.nguoi.boPhan&&!db.depts.includes(F.nguoi.boPhan.trim())?'<button class="link" id="saveDept">+ Lưu bộ phận này</button>':'');
+  const nd=[...(ND[F.loai]||[])];
+  const it=invoiceText();if(it)nd.unshift(it);
+  const isHD=F.mode==='hop-dong'&&(F.hd.so||F.hd.noiDung||F.hd.benB);
+  $('#ndStyle').hidden=!isHD;
+  if(isHD){const cur=S().ndKieu||'mucdich';$('#ndStyleChips').innerHTML=ND_STYLES.map(([k,lb])=>`<button class="chip ${cur===k&&F.ndAuto!==false?'on':''}" data-ndstyle="${k}" title="${esc(contractText(k))}">${lb}</button>`).join('')}
+  $('#ndChips').innerHTML=[...new Set(nd)].slice(0,4).map(t=>`<button class="chip" data-nd="${esc(t)}" title="${esc(t)}">${esc(t)}</button>`).join('');
+  $('#thChips').innerHTML=db.benefs.slice(0,10).map((b,i)=>`<button class="chip ${b.ten===F.thuHuong.ten?'on':''}" data-benef="${i}" title="${esc(b.stk+' '+b.nh)}">${esc(b.ten)}</button>`).join('');
+  const sellers=[...new Map(F.invoices.filter(v=>v.ban).map(v=>[norm(v.ban),v])).values()].filter(v=>norm(v.ban)!==norm(F.thuHuong.ten));
+  $('#acctChips').innerHTML=sellers.map(v=>`<button class="chip" data-seller="${v.id}">Lấy theo hóa đơn: ${esc(v.ban)}</button>`).join('');
+}
+const lcFirst=s=>s?s[0].toLowerCase()+s.slice(1):s;
+function invoiceText(){
+  const iv=F.invoices.filter(v=>v.so||v.noiDung);if(!iv.length)return '';
+  const g=iv.find(v=>v.noiDung);let goods=g?g.noiDung.replace(/\s+và\s+\d+\s+mặt hàng khác$/,''):'hàng hóa, dịch vụ';
+  const many=iv.reduce((a,v)=>a+((v.noiDung.match(/và (\d+) mặt hàng khác/)||[])[1]|0),0)+iv.filter(v=>v.noiDung).length>1;
+  const {verbs,rest}=purposeOf(goods);
+  const pre={'mua-sam':'mua ','sua-chua':'sửa chữa ','dich-vu':'','hoi-nghi':'','cong-tac':'','hop-dong':'','khac':''}[F.loai]||'';
+  let s='Thanh toán tiền '+(verbs.length?verbs.join(', ')+' '+lcFirst(rest):pre+lcFirst(goods))+(many?' và một số mặt hàng khác':'');
+  if(iv.length===1){const v=iv[0];s+=' theo hóa đơn số '+(v.so||'…')+(v.ngay?' ngày '+vnDate(v.ngay):'');if(v.ban)s+=' của '+v.ban}
+  else{const sellers=[...new Set(iv.map(v=>v.ban).filter(Boolean))];s+=` theo ${iv.length} hóa đơn kèm theo`+(sellers.length===1?' của '+sellers[0]:'')}
+  return s.replace(/\s+/g,' ');
+}
+function autoContent(){
+  if(F.ndAuto===false&&F.noiDung.trim())return;
+  const t=(F.mode==='hop-dong'&&(F.hd.so||F.hd.benB||F.hd.noiDung))?contractText():invoiceText();
+  if(t){F.noiDung=t;F.ndAuto=true}
+}
+function autoBenefFromContract(){
+  if(!F.hd.benB||(F.thAuto===false&&F.thuHuong.ten))return;
+  if(norm(F.thuHuong.ten)===norm(F.hd.benB))return;
+  F.thuHuong={ten:F.hd.benB,mst:'',stk:'',nh:''};const b=matchBenef(F.hd.benB,'');if(b)Object.assign(F.thuHuong,{stk:b.stk||'',nh:b.nh||'',mst:b.mst||''});F.thAuto=true;
+}
+const ND_STYLES=[['mucdich','Theo mục đích (khuyên dùng)'],['hd','Thanh toán hợp đồng …'],['chiphi','Thanh toán chi phí … theo HĐ'],['ngan','Chỉ ghi công việc']];
+/* Hiểu mục đích: tách "động từ công việc" + "đối tượng, mục đích, địa điểm", quy về thuật ngữ chứng từ */
+const VERBS=[
+  [/^(?:cung\s*c[ấa]p|b[áa]n|mua(?:\s*s[ắa]m)?)$/i,'mua sắm'],
+  [/^(?:l[ắa]p\s*đ[ặa]t|l[ắa]p\s*d[ựu]ng|c[àa]i\s*đ[ặa]t)$/i,'lắp đặt'],
+  [/^(?:thi\s*c[ôo]ng|x[âa]y\s*d[ựu]ng|x[âa]y\s*l[ắa]p)$/i,'thi công'],
+  [/^s[ửu]a\s*ch[ữu]a$/i,'sửa chữa'],[/^b[ảa]o\s*d[ưu][ỡo]ng$/i,'bảo dưỡng'],[/^b[ảa]o\s*tr[ìi]$/i,'bảo trì'],
+  [/^c[ảa]i\s*t[ạa]o$/i,'cải tạo'],[/^n[âa]ng\s*c[ấa]p$/i,'nâng cấp'],[/^thay\s*th[ếe]$/i,'thay thế'],
+  [/^(?:gi[ảa]ng\s*d[ạa]y|th[ỉi]nh\s*gi[ảa]ng|tham\s*gia\s*gi[ảa]ng\s*d[ạa]y)$/i,'giảng dạy'],[/^b[áa]o\s*c[áa]o(?:\s*vi[êe]n)?$/i,'báo cáo'],[/^bi[êe]n\s*so[ạa]n$/i,'biên soạn'],
+  [/^ch[ấa]m(?:\s*(?:b[àa]i|thi))?$/i,'chấm bài'],[/^coi\s*thi$/i,'coi thi'],[/^ph[ảa]n\s*bi[ệe]n$/i,'phản biện'],[/^d[ịi]ch(?:\s*thu[ậa]t)?$/i,'dịch thuật'],
+  [/^in(?:\s*[ấa]n)?$/i,'in ấn'],[/^(?:cho\s*thu[êe]|thu[êe])$/i,'thuê'],[/^may(?:\s*đo)?$/i,'may'],
+  [/^thi[ếe]t\s*k[ếe]$/i,'thiết kế'],[/^t[ưu]\s*v[ấa]n$/i,'tư vấn'],[/^đ[àa]o\s*t[ạa]o$/i,'đào tạo'],[/^s[ảa]n\s*xu[ấa]t$/i,'sản xuất'],
+  [/^(?:v[ậa]n\s*chuy[ểe]n|b[àa]n\s*giao|ch[ạa]y\s*th[ửu]|h[ưu][ớo]ng\s*d[ẫa]n(?:\s*s[ửu]\s*d[ụu]ng)?|ki[ểe]m\s*tra|hi[ệe]u\s*ch[ỉi]nh|th[ựu]c\s*hi[ệe]n)$/i,'']];
+const VERB_ALT='tham\\s*gia\\s*gi[ảa]ng\\s*d[ạa]y|gi[ảa]ng\\s*d[ạa]y|th[ỉi]nh\\s*gi[ảa]ng|b[áa]o\\s*c[áa]o\\s*vi[êe]n|b[áa]o\\s*c[áa]o|bi[êe]n\\s*so[ạa]n|ch[ấa]m\\s*b[àa]i|ch[ấa]m\\s*thi|coi\\s*thi|ph[ảa]n\\s*bi[ệe]n|d[ịi]ch\\s*thu[ậa]t|cung\\s*c[ấa]p|b[áa]n|mua\\s*s[ắa]m|mua|l[ắa]p\\s*đ[ặa]t|l[ắa]p\\s*d[ựu]ng|c[àa]i\\s*đ[ặa]t|thi\\s*c[ôo]ng|x[âa]y\\s*d[ựu]ng|x[âa]y\\s*l[ắa]p|s[ửu]a\\s*ch[ữu]a|b[ảa]o\\s*d[ưu][ỡo]ng|b[ảa]o\\s*tr[ìi]|c[ảa]i\\s*t[ạa]o|n[âa]ng\\s*c[ấa]p|thay\\s*th[ếe]|in\\s*[ấa]n|in|cho\\s*thu[êe]|thu[êe]|may\\s*đo|may|thi[ếe]t\\s*k[ếe]|t[ưu]\\s*v[ấa]n|đ[àa]o\\s*t[ạa]o|s[ảa]n\\s*xu[ấa]t|v[ậa]n\\s*chuy[ểe]n|b[àa]n\\s*giao|ch[ạa]y\\s*th[ửu]|h[ưu][ớo]ng\\s*d[ẫa]n\\s*s[ửu]\\s*d[ụu]ng|h[ưu][ớo]ng\\s*d[ẫa]n|ki[ểe]m\\s*tra|hi[ệe]u\\s*ch[ỉi]nh|th[ựu]c\\s*hi[ệe]n';
+const ADV='(?:\\s*(?:ho[àa]n\\s*ch[ỉi]nh|tr[ọo]n\\s*g[óo]i|to[àa]n\\s*b[ộo]|m[ớo]i))*';
+function purposeOf(work){
+  work=String(work||'').replace(/\s+/g,' ').trim();
+  const re=new RegExp('^((?:'+VERB_ALT+')'+ADV+'(?:\\s*(?:,|v[àa]|v[àa]\\s*/\\s*ho[ặa]c|/)\\s*(?:'+VERB_ALT+')'+ADV+')*)\\s+(.+)$','i');
+  const m=work.match(re);
+  let verbs=[],rest=work;
+  if(m){rest=m[2];
+    m[1].replace(new RegExp(ADV.slice(3,-2),'gi'),' ').split(/\s*,\s*|\s+v[àa]\s+|\s*\/\s*|\s+ho[ặa]c\s+/i).map(x=>x.trim()).filter(Boolean).forEach(v=>{
+      const hit=VERBS.find(([r])=>r.test(v));const w=hit?hit[1]:v.toLowerCase();if(w&&!verbs.includes(w))verbs.push(w)});}
+  rest=rest.replace(/^(?:ho[àa]n\s*ch[ỉi]nh|tr[ọo]n\s*g[óo]i|to[àa]n\s*b[ộo])\s+/i,'')
+    .replace(/ph[ụu]c\s*v[ụu]\s*cho/gi,'phục vụ')
+    .replace(/([a-zà-ỹ])\s*\/\s*([a-zà-ỹ])/gi,'$1, $2')
+    .replace(/\bled\b/g,'LED').replace(/[.;,\s]+$/,'');
+  if(/^d[ịi]ch\s*v[ụu]/i.test(rest))verbs=verbs.filter(v=>v!=='mua sắm');
+  return{verbs,rest};
+}
+function basisText(ref){
+  const parts=[];if(ref)parts.push(ref);
+  const bbs=(F.bb||[]).slice().sort((a,b)=>(a.ngay||'').localeCompare(b.ngay||''));
+  const pick=l=>bbs.filter(x=>x.loai===l).at(-1);
+  const nt=pick('nghiệm thu'),tl=pick('thanh lý'),gn=pick('giao nhận');
+  for(const x of [gn&&!nt?gn:null,nt,tl].filter(Boolean))parts.push('Biên bản '+x.loai+(x.ngay?' ngày '+vnDate(x.ngay):''));
+  const iv=F.invoices.filter(v=>v.so);
+  if(iv.length===1)parts.push('Hóa đơn số '+iv[0].so+(iv[0].ngay?' ngày '+vnDate(iv[0].ngay):''));
+  else if(iv.length>1)parts.push(iv.length+' hóa đơn kèm theo');
+  return parts.length>1?parts.slice(0,-1).join(', ')+' và '+parts.at(-1):(parts[0]||'');
+}
+function pctText(){
+  const h=F.hd;if(!h.giaTri||!F.soTien||F.soTien>=h.giaTri)return '';
+  if(!/T[ạa]m\s*[ứu]ng|đ[ợo]t/i.test(h.dot||''))return '';
+  const p=F.soTien/h.giaTri*100,r=Math.round(p);
+  return Math.abs(p-r)<0.05?` (${r}% giá trị hợp đồng)`:'';
+}
+function purposeText(work,lead,ref,last){
+  const {verbs,rest}=purposeOf(work);
+  const TL=['giảng dạy','báo cáo','biên soạn','chấm bài','coi thi','phản biện'];
+  const money=verbs.length&&verbs.every(v=>TL.includes(v))?'thù lao':'tiền';
+  const act=verbs.length?verbs.join(', ')+' ':(/^(?:d[ịi]ch\s*v[ụu]|ti[ềe]n|chi\s*ph[íi]|kinh\s*ph[íi])/i.test(rest)?'':'mua sắm ');
+  const basis=basisText(ref),hasTL=(F.bb||[]).some(x=>x.loai==='thanh lý');
+  return `${lead} ${money} ${act}${lcFirst(rest)}${pctText()}${basis?' theo '+basis:''}${last&&!hasTL?' (thanh lý hợp đồng)':''}`.replace(/\s+/g,' ');
+}
+function contractText(style){
+  const h=F.hd,dot=h.dot||'Thanh toán';style=style||S().ndKieu||'mucdich';
+  let work=(h.noiDung||'').trim().replace(/^v[ềe]\s*vi[ệe]c\s*:?\s*/i,'').replace(/[.;]+$/,'');
+  const ref='Hợp đồng'+(h.so?' số '+h.so:'')+(h.ngay?(h.so?' ngày ':' ký ngày ')+vnDate(h.ngay):'');
+  if(!work)return `${dot} ${ref}`;
+  work=lcFirst(work);
+  if(style==='ngan')return work[0].toUpperCase()+work.slice(1);
+  if(style==='mucdich'){
+    const lead={'Tạm ứng':'Tạm ứng','Thanh toán lần cuối và thanh lý':'Thanh toán lần cuối'}[dot]||dot;
+    return purposeText(work,lead,ref!=='Hợp đồng'?ref:'',dot==='Thanh toán lần cuối và thanh lý');
+  }
+  if(style==='chiphi'){
+    const lead={'Tạm ứng':'Tạm ứng kinh phí','Thanh toán':'Thanh toán chi phí','Thanh toán đợt 1':'Thanh toán đợt 1 chi phí',
+      'Thanh toán đợt 2':'Thanh toán đợt 2 chi phí','Thanh toán lần cuối và thanh lý':'Thanh toán lần cuối chi phí'}[dot]||dot;
+    return `${lead} ${work}${pctText()} theo ${basisText(ref)}`+(dot==='Thanh toán lần cuối và thanh lý'&&!(F.bb||[]).some(x=>x.loai==='thanh lý')?' (thanh lý hợp đồng)':'');
+  }
+  const lead={'Tạm ứng':'Tạm ứng','Thanh toán lần cuối và thanh lý':'Thanh toán lần cuối và thanh lý'}[dot]||dot;
+  return `${lead} hợp đồng ${work}`+(ref!=='Hợp đồng'?` (${ref})`:'');
+}
+function renderKy(){
+  $('#kyRows').innerHTML=S().ky.map((k,i)=>`<div class="ky" data-ky="${i}">
+    <input type="checkbox" data-kf="show" ${k.show?'checked':''} aria-label="Hiện ô ký">
+    <input class="in" data-kf="title" value="${esc(k.title)}" aria-label="Chức danh">
+    <input class="in" data-kf="name" value="${esc(k.auto&&!k.name?'':k.name)}" placeholder="${k.auto?'Tự lấy tên người đề nghị':'Họ và tên'}" aria-label="Họ tên"></div>`).join('');
+}
+function onKyField(el){const i=+el.closest('.ky').dataset.ky,f=el.dataset.kf;S().ky[i][f]=el.type==='checkbox'?el.checked:el.value;saveDB();renderPreview();renderSums()}
+function renderRanges(){$('#oFont').textContent=S().kyFont+' pt';$('#oGap').textContent=S().kyGap+' mm'}
+function renderCalc(){
+  const t=F.tamUng||0;
+  $('#calcBox').innerHTML=t?`<div class="calc"><span>${t>F.soTien?'Số tạm ứng thừa phải nộp lại':'Số tiền còn được thanh toán'}</span><b>${fmt(Math.abs(F.soTien-t))} đ</b></div>`:'';
+}
+function renderSums(){
+  const s1=F.invoices.length?`${F.invoices.length} hóa đơn · ${fmt(sumInv('tong'))} đ`:FILES.length?`${FILES.length} file`:'';
+  $('#sum1').textContent=s1;
+  $('#sum2').textContent=[F.nguoi.ten,F.nguoi.boPhan].filter(Boolean).join(', ');
+  $('#sum3').textContent=F.soTien?fmt(F.soTien)+' đ':'';
+  $('#sum4').textContent=F.thuHuong.ten;
+  $('#sum5').textContent=S().ky.filter(k=>k.show).length+' ô ký';
+  $('#st2').classList.toggle('ok',!!(F.nguoi.ten&&F.nguoi.boPhan));
+  $('#st3').classList.toggle('ok',!!(F.noiDung.trim()&&F.soTien));
+  $('#st4').classList.toggle('ok',!!(F.thuHuong.ten&&(F.hinhThuc==='tm'||F.thuHuong.stk)));
+  $('#st1').classList.toggle('ok',F.invoices.length>0||FILES.length>0);
+  renderCalc();renderBadges();
+}
+function renderBadges(){
+  const nd=$('#autoND'),th=$('#autoTH'),st=$('#autoST');
+  const fromHD=F.mode==='hop-dong'&&(F.hd.so||F.hd.benB);
+  nd.hidden=!(F.ndAuto!==false&&F.noiDung.trim());nd.textContent=fromHD?'Tự điền từ hợp đồng':'Tự điền từ hóa đơn';
+  th.hidden=!(F.thAuto!==false&&F.thuHuong.ten);th.textContent=F.hd.benB&&norm(F.hd.benB)===norm(F.thuHuong.ten)?'Tự điền: Bên B':'Tự điền';
+  const byInv=F.autoSum&&F.invoices.length;st.hidden=!(byInv||F.stSrc==='hd');st.textContent=byInv?'Cộng từ hóa đơn':'Theo giá trị hợp đồng';
+}
+function required(){return[['nguoi.ten',F.nguoi.ten],['nguoi.boPhan',F.nguoi.boPhan],['noiDung',F.noiDung.trim()],['soTien',F.soTien>0],['thuHuong.ten',F.thuHuong.ten],['thuHuong.stk',F.hinhThuc==='tm'||F.thuHuong.stk]]}
+function renderMeter(){const r=required(),ok=r.filter(x=>x[1]).length;$('#meterBar').style.width=(ok/r.length*100)+'%';$('#meterTxt').textContent=`${ok}/${r.length} mục bắt buộc`}
+function renderStatus(){
+  const d=db.drafts.find(x=>x.id===F.id);
+  let t='Bản mới, chưa lưu';
+  if(d){const tm=new Date(d.savedAt);t=(F.status==='da-nop'?'Đã nộp kế toán':'Đã lưu')+' lúc '+tm.toLocaleTimeString('vi-VN',{hour:'2-digit',minute:'2-digit'})+' '+tm.toLocaleDateString('vi-VN')+(dirty?' · có thay đổi chưa lưu':'')}
+  $('#status').textContent=t;
+}
+
+/* ================= render: bản in ================= */
+function docDate(iso,blank){
+  if(blank||!iso)return 'Ngày …… tháng …… năm 20……';
+  const[y,m,d]=iso.split('-');return `Ngày ${d} tháng ${m} năm ${y}`;
+}
+const V=(s,n)=>s?esc(s):dots(n);
+function pageMain(){
+  const s=S(),t=F.tamUng||0,still=F.soTien-t;
+  const sig=s.ky.filter(k=>k.show);
+  const kyName=k=>k.auto&&!k.name?F.nguoi.ten:k.name;
+  let h=`<div class="page">
+  <table class="d-head"><tr><td class="d-org">${s.inLogo?`<img class="d-logo" src="${$('.logo').src}" alt="">`:''}<div class="u1">${esc(s.coQuan)}</div><div class="u2">${esc(s.donVi)}</div><div class="rule"></div>${F.so?`<div class="so">Số: ${esc(F.so)}</div>`:''}</td>
+  <td class="d-form">${esc(s.mauSo)}</td></tr></table>
+  <div class="d-title">GIẤY ĐỀ NGHỊ THANH TOÁN</div>
+  <div class="d-date">${docDate(F.ngay,F.deTrongNgay)}</div>
+  <p class="d-kg">Kính gửi: ${V(F.kinhGui,1.2)}</p>
+  <p class="d-ln">Họ và tên người đề nghị thanh toán: ${V(F.nguoi.ten,1)}</p>`;
+  if(F.mode==='ca-nhan-stk')h+=`<p class="d-ln">Số tài khoản: ${V(F.nguoi.stk,.5)} tại ${V(F.nguoi.nh,.7)}</p>`;
+  h+=`<p class="d-ln">Bộ phận (hoặc địa chỉ): ${V(F.nguoi.boPhan,1.2)}</p>
+  <p class="d-ln">Nội dung thanh toán: ${F.noiDung.trim()?esc(F.noiDung.trim()).replace(/\n/g,'<br>'):dots(1.3)+'<br>'+dots(1.65)}</p>
+  <p class="d-ln">Số tiền: <span class="bold">${F.soTien?fmt(F.soTien)+' đồng':dots(.8)}</span></p>
+  <p class="d-ln"><span class="em">(Viết bằng chữ: ${F.chu?esc(F.chu):dots(1.5)})</span></p>
+  <p class="d-ln">Kèm theo: ${F.kemTheo?String(F.kemTheo).padStart(2,'0'):'……'} chứng từ gốc.</p>
+  <p class="d-ln">Số tiền đã tạm ứng: ${t?fmt(t)+' đồng':'……………… đồng'}</p>`;
+  if(t)h+=`<p class="d-ln">${still>=0?'Số tiền còn được thanh toán':'Số tạm ứng thừa phải nộp lại'}: <span class="bold">${fmt(Math.abs(still))} đồng</span></p>`;
+  h+=`<p class="d-ln">Hình thức thanh toán: ${F.hinhThuc==='tm'?'Tiền mặt':'Chuyển khoản'}</p>
+  <p class="d-ln">Đơn vị thụ hưởng: ${V(F.thuHuong.ten,1.1)}</p>
+  <p class="d-ln">Số tài khoản: ${V(F.thuHuong.stk,.5)} tại ${V(F.thuHuong.nh,.7)}</p>`;
+  h+=`<table class="d-sig" style="font-size:${s.kyFont}pt"><tr>${sig.map(k=>`<td><div class="t">${esc(k.title)}</div><div class="k">(Ký, họ tên)</div><div style="height:${s.kyGap}mm"></div><div class="n">${esc(kyName(k)||'')}</div></td>`).join('')}</tr></table></div>`;
+  return h;
+}
+function pageList(){
+  const s=S(),rows=F.invoices;
+  return `<div class="page">
+  <table class="d-head"><tr><td class="d-org"><div class="u1">${esc(s.coQuan)}</div><div class="u2">${esc(s.donVi)}</div><div class="rule"></div></td><td></td></tr></table>
+  <div class="d-bk-title">BẢNG KÊ CHỨNG TỪ ĐỀ NGHỊ THANH TOÁN</div>
+  <div class="d-bk-sub">(Kèm theo Giấy đề nghị thanh toán ${F.deTrongNgay||!F.ngay?'ngày …/…/……':'ngày '+vnDate(F.ngay)}${F.nguoi.ten?' của '+esc(F.nguoi.ten):''})</div>
+  <table class="d-tbl"><thead><tr><th style="width:5%">STT</th><th style="width:14%">Ký hiệu, số hóa đơn</th><th style="width:11%">Ngày</th><th>Đơn vị bán, nội dung</th><th style="width:14%">Tiền trước thuế</th><th style="width:11%">Thuế GTGT</th><th style="width:15%">Tổng cộng</th></tr></thead>
+  <tbody>${rows.map((v,i)=>`<tr><td class="c">${i+1}</td><td>${esc(v.kyHieu)}${v.kyHieu&&v.so?'<br>':''}${esc(v.so)}</td><td class="c">${vnDate(v.ngay)}</td>
+    <td>${esc(v.ban)}${v.mst?`<br><i>MST: ${esc(v.mst)}</i>`:''}${v.noiDung?`<br>${esc(v.noiDung)}`:''}</td>
+    <td class="r">${fmt(v.truoc)}</td><td class="r">${fmt(v.thue)}</td><td class="r">${fmt(v.tong)}</td></tr>`).join('')}</tbody>
+  <tfoot><tr><td colspan="4" class="c">Tổng cộng</td><td class="r">${fmt(sumInv('truoc'))}</td><td class="r">${fmt(sumInv('thue'))}</td><td class="r">${fmt(sumInv('tong'))}</td></tr></tfoot></table>
+  <p style="margin-top:8pt"><i>Số tiền bằng chữ: ${esc(moneyWords(sumInv('tong'))||'')}</i></p>
+  <table class="d-sig" style="font-size:${s.kyFont}pt;margin-top:14pt"><tr><td></td><td><div class="t">Người lập bảng</div><div class="k">(Ký, họ tên)</div><div style="height:${s.kyGap}mm"></div><div class="n">${esc(F.nguoi.ten)}</div></td></tr></table>
+  </div>`;
+}
+function docHTML(){return pageMain()+(S().banKe&&F.invoices.length?pageList():'')}
+let zoom=null;
+function renderPreview(){
+  $('#pages').innerHTML=docHTML();
+  const n=$$('#pages .page').length;
+  $$('#pages .page').forEach((p,i)=>{if(n>1)p.insertAdjacentHTML('beforeend',`<div class="pg-no">Trang ${i+1}/${n}</div>`)});
+  $('#pvInfo').textContent=`Khổ A4 · ${n} trang`;applyZoom();
+}
+function fitZoom(){const w=$('.preview').clientWidth-48;return Math.max(.35,Math.min(1.25,w/794))}
+function applyZoom(){const z=zoom??fitZoom();$('#pages').style.zoom=z;$('#zTxt').textContent=Math.round(z*100)+'%'}
+$('#zIn').onclick=()=>{zoom=Math.min(2,(zoom??fitZoom())+.1);applyZoom()};
+$('#zOut').onclick=()=>{zoom=Math.max(.3,(zoom??fitZoom())-.1);applyZoom()};
+$('#zFit').onclick=()=>{zoom=null;applyZoom()};
+addEventListener('resize',()=>{if(zoom===null)applyZoom()});
+
+/* ================= kiểm tra hoàn chỉnh ================= */
+function validate(){
+  const out=[],E=(m,k,d)=>out.push({lv:'err',m,k,d}),W=(m,k,d)=>out.push({lv:'warn',m,k,d}),I=(m,k,d)=>out.push({lv:'info',m,k,d});
+  const s=S();
+  if(!F.nguoi.ten)E('Chưa có họ tên người đề nghị','nguoi.ten');
+  if(!F.nguoi.boPhan)E('Chưa ghi bộ phận (hoặc địa chỉ)','nguoi.boPhan');
+  if(!F.noiDung.trim())E('Chưa có nội dung thanh toán','noiDung');
+  else if(F.noiDung.trim().length<15)W('Nội dung thanh toán quá ngắn, nên ghi rõ mua gì, phục vụ việc gì','noiDung');
+  if(!F.soTien)E('Chưa có số tiền đề nghị','soTien');
+  if(F.soTien&&F.chuManual&&norm(F.chu)!==norm(moneyWords(F.soTien)))W('Số tiền bằng chữ không khớp với số tiền bằng số','chu','Bấm "Đọc lại theo số" để tạo lại.');
+  if(!F.thuHuong.ten)E('Chưa có đơn vị thụ hưởng','thuHuong.ten');
+  if(F.hinhThuc==='ck'&&!F.thuHuong.stk)E('Thanh toán chuyển khoản nhưng chưa có số tài khoản thụ hưởng','thuHuong.stk');
+  if(F.thuHuong.stk&&!/^\d{6,20}$/.test(F.thuHuong.stk.replace(/[\s.-]/g,'')))W('Số tài khoản thụ hưởng có ký tự lạ hoặc độ dài bất thường','thuHuong.stk');
+  if(F.hinhThuc==='ck'&&F.thuHuong.stk&&!F.thuHuong.nh)W('Chưa ghi ngân hàng mở tài khoản thụ hưởng','thuHuong.nh');
+  if(F.mode==='ca-nhan-stk'&&!F.nguoi.stk)W('Đã chọn "kèm STK" nhưng chưa có số tài khoản người đề nghị','nguoi.stk');
+  if(F.thuHuong.mst&&![10,12,13].includes(digits(F.thuHuong.mst).length))W('Mã số thuế thụ hưởng phải có 10, 12 hoặc 13 chữ số','thuHuong.mst');
+  if(F.tamUng>F.soTien)W(`Số đã tạm ứng lớn hơn số đề nghị, phải nộp lại ${fmt(F.tamUng-F.soTien)} đ`,'tamUng');
+  if(!F.ngay&&!F.deTrongNgay)W('Chưa có ngày lập','ngay');
+  // hóa đơn
+  const inv=F.invoices,sum=sumInv('tong');
+  if(inv.length&&F.soTien&&sum!==F.soTien)W(`Số tiền đề nghị (${fmt(F.soTien)} đ) khác tổng hóa đơn (${fmt(sum)} đ)`,'soTien','Nếu thanh toán một phần, ghi rõ trong nội dung.');
+  const iss=invoiceIssues(),reqD=F.ngay;
+  inv.forEach((v,i)=>{const lb=`Hóa đơn ${i+1}${v.so?' (số '+v.so+')':''}`;
+    if(iss[v.id]){(iss[v.id].includes('trùng')||iss[v.id].includes('đã thanh toán')?E:W)(`${lb}: ${iss[v.id]}`,'inv:'+v.id)}
+    if(!v.so||!v.ngay)E(`${lb}: thiếu số hoặc ngày hóa đơn`,'inv:'+v.id);
+    if(v.mst&&![10,12,13].includes(digits(v.mst).length))W(`${lb}: MST bên bán không hợp lệ`,'inv:'+v.id);
+    if(v.ngay&&reqD&&!F.deTrongNgay&&v.ngay>reqD)E(`${lb}: ngày hóa đơn ${vnDate(v.ngay)} sau ngày lập giấy`,'inv:'+v.id);
+    if(v.ngay&&reqD&&v.ngay.slice(0,4)!==reqD.slice(0,4))W(`${lb}: hóa đơn năm ${v.ngay.slice(0,4)}, khác năm lập giấy`,'inv:'+v.id,'Kiểm tra niên độ ngân sách, quyết toán năm.');
+    if(s.mstDonVi&&v.mua&&digits(v.mua)!==digits(s.mstDonVi))E(`${lb}: MST người mua (${v.mua}) không phải MST đơn vị`,'inv:'+v.id,'Hóa đơn phải xuất đúng tên, MST của đơn vị.');
+    if(F.hinhThuc==='tm'&&v.tong>=s.nguongTM)W(`${lb}: giá trị ${fmt(v.tong)} đ, nên thanh toán chuyển khoản`,'hinhThuc');
+  });
+  if(inv.length&&F.thuHuong.ten){const n=norm(F.thuHuong.ten);
+    const sellers=[...new Set(inv.map(v=>v.ban).filter(Boolean))];
+    if(sellers.length&&!sellers.some(x=>{const a=norm(x);return a&&(a.includes(n)||n.includes(a))})&&norm(F.thuHuong.ten)!==norm(F.nguoi.ten))
+      W(`Đơn vị thụ hưởng khác đơn vị bán trên hóa đơn (${sellers[0]})`,'thuHuong.ten','Nếu người đề nghị đã ứng tiền mua thì chọn "Là chính người đề nghị".');}
+  if(!inv.length&&F.loai!=='cong-tac')I('Chưa có hóa đơn nào trong bảng kê','addInv');
+  // hợp đồng
+  if(F.mode==='hop-dong'){if(!F.hd.so||F.hd.so.startsWith('…'))W('Chưa có số hợp đồng (file hợp đồng để trống số hoặc app chưa đọc được), nhập ở bước 2','hd.so');
+    if(F.hd.giaTri&&F.soTien>F.hd.giaTri)E(`Số đề nghị vượt giá trị hợp đồng (${fmt(F.hd.giaTri)} đ)`,'soTien');
+    if(F.hd.benB&&F.thuHuong.ten&&norm(F.hd.benB)!==norm(F.thuHuong.ten))W('Đơn vị thụ hưởng khác Bên B trong hợp đồng','thuHuong.ten');}
+  const miss=(CL[F.loai]||[]).filter(t=>!F.checklist[t]);
+  if(miss.length)I(`Hồ sơ kèm theo chưa đánh dấu ${miss.length} mục`,'loai',miss.join('; '));
+  const sig=s.ky.filter(k=>k.show&&!k.auto&&!k.name);if(sig.length)I(`${sig.length} ô ký chưa có họ tên in sẵn`,'ky',sig.map(k=>k.title).join(', '));
+  return out;
+}
+function showCheck(){
+  const r=validate(),e=r.filter(x=>x.lv==='err').length,w=r.filter(x=>x.lv==='warn').length;
+  const v=e?['err',`Còn ${e} lỗi cần sửa${w?` và ${w} điểm cần xem lại`:''}`]:w?['warn',`Không có lỗi, còn ${w} điểm nên xem lại`]:['ok','Giấy đề nghị đã đủ thông tin, có thể in trình ký'];
+  $('#checkBody').innerHTML=`<div class="verdict ${v[0]}">${v[1]}</div>`+(r.length?`<ul class="issues">${r.map((x,i)=>`<li class="${x.lv}"><span class="dot"></span><div>${esc(x.m)}${x.d?`<small>${esc(x.d)}</small>`:''}</div>${x.k?`<button class="link" data-goto="${esc(x.k)}">Sửa</button>`:''}</li>`).join('')}</ul>`:'');
+  $('#dlgCheck').showModal();
+}
+function gotoField(k){
+  $('#dlgCheck').close();setTab('lap');document.body.classList.remove('show-pv');setMobile(false);
+  let el;
+  if(k.startsWith('inv:'))el=$(`.inv[data-inv="${k.slice(4)}"] input`);
+  else if(k==='ky'){$('#st5').open=true;el=$('#kyRows input.in')}
+  else if(k==='addInv')el=$('#drop');
+  else el=$(`[data-k="${k}"]`);
+  if(!el)return;const d=el.closest('details.step');if(d)d.open=true;
+  el.scrollIntoView({block:'center',behavior:'smooth'});setTimeout(()=>{el.focus({preventScroll:true});if(el.classList.contains('in')){el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash')}},250);
+}
+
+/* ================= lưu, danh mục ================= */
+function learn(){
+  const p=F.nguoi;if(p.ten){const i=db.names.findIndex(x=>norm(x.ten)===norm(p.ten));const rec={ten:p.ten.trim(),boPhan:p.boPhan,stk:p.stk,nh:p.nh};
+    if(i>=0)db.names.splice(i,1);db.names.unshift(rec)}
+  if(p.boPhan&&!db.depts.includes(p.boPhan.trim()))db.depts.unshift(p.boPhan.trim());
+  saveBenef(true);
+}
+function saveBenef(silent){
+  const t=F.thuHuong;if(!t.ten||norm(t.ten)===norm(F.nguoi.ten))return;
+  const i=db.benefs.findIndex(b=>norm(b.ten)===norm(t.ten));const rec={ten:t.ten.trim(),mst:t.mst,stk:t.stk,nh:t.nh};
+  if(i>=0)db.benefs.splice(i,1);db.benefs.unshift(rec);saveDB();if(!silent){toast('Đã lưu đơn vị thụ hưởng');renderChips();renderCatalog()}
+}
+function saveForm(msg=true){
+  compute();learn();F.savedAt=Date.now();
+  const rec=structuredClone(F);rec.invoices.forEach(v=>delete v._tongManual);
+  const i=db.drafts.findIndex(d=>d.id===F.id);if(i>=0)db.drafts[i]=rec;else db.drafts.unshift(rec);
+  saveDB();store(CUR,F);dirty=false;renderAll();if(msg)toast('Đã lưu hồ sơ');
+}
+function openForm(d){F=Object.assign(newForm(),structuredClone(d));FILES=[];dirty=false;store(CUR,F);syncInputs();renderAll();setTab('lap');toast('Đã mở hồ sơ')}
+function freshForm(){F=newForm();FILES=[];dirty=false;store(CUR,F);syncInputs();renderAll();setTab('lap');}
+function renderDrafts(){
+  const q=norm($('#qDraft').value),flt=($('input[name=flt]:checked')||{}).value||'all';
+  const now=new Date(),ym=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0');
+  const mon=db.drafts.filter(d=>(d.ngay||'').startsWith(ym));
+  $('#stMonthN').textContent=mon.length+' giấy';$('#stMonthT').textContent=fmt(mon.reduce((a,d)=>a+(d.soTien||0),0))+' đ';
+  $('#cntDrafts').textContent=db.drafts.length;
+  const list=db.drafts.filter(d=>(flt==='all'||d.status===flt)&&(!q||norm([d.noiDung,d.nguoi?.ten,d.thuHuong?.ten,d.so,...(d.invoices||[]).map(v=>v.so+' '+v.ban)].join(' ')).includes(q)))
+    .sort((a,b)=>(b.savedAt||0)-(a.savedAt||0));
+  $('#draftList').innerHTML=list.length?list.map(d=>`<div class="dr ${d.id===F.id?'cur':''}">
+    <div class="dr-top"><b>${fmt(d.soTien)} đ</b><span class="badge ${d.status==='da-nop'?'done':''}">${d.status==='da-nop'?'Đã nộp':'Nháp'}</span><small>${d.ngay?vnDate(d.ngay):''}</small></div>
+    <p>${esc(d.noiDung||'(chưa có nội dung)')}</p>
+    <p style="font-size:12px;color:var(--mute)">${esc(d.nguoi?.ten||'')}${d.thuHuong?.ten?' → '+esc(d.thuHuong.ten):''}${d.invoices?.length?' · '+d.invoices.length+' hóa đơn':''}</p>
+    <div class="acts"><button class="link" data-open="${d.id}">Mở</button><button class="link" data-dup="${d.id}">Nhân bản</button>
+      <button class="link" data-sub="${d.id}">${d.status==='da-nop'?'Chuyển về nháp':'Đánh dấu đã nộp'}</button><button class="link danger" data-del="${d.id}" style="margin-left:auto">Xoá</button></div></div>`).join('')
+    :`<div class="empty">${db.drafts.length?'Không có hồ sơ khớp bộ lọc.':'Chưa có hồ sơ nào. Hồ sơ được lưu khi bạn bấm Lưu (Ctrl+S) hoặc In.'}</div>`;
+}
+function renderCatalog(){
+  const sec=(t,arr,row,key)=>`<h3>${t}<span>${arr.length}</span></h3>${arr.length?`<ul>${arr.map((x,i)=>`<li><div>${row(x)}</div><button class="x" data-rmcat="${key}:${i}" aria-label="Xoá">×</button></li>`).join('')}</ul>`:'<div class="empty">Chưa có.</div>'}`;
+  $('#catBox').innerHTML=
+    sec('Người đề nghị',db.names,p=>`${esc(p.ten)}<small>${esc([p.boPhan,p.stk&&('STK '+p.stk),p.nh].filter(Boolean).join(' · '))}</small>`,'names')+
+    sec('Bộ phận',db.depts,d=>esc(d),'depts')+
+    sec('Đơn vị thụ hưởng và tài khoản',db.benefs,b=>`${esc(b.ten)}<small>${esc([b.mst&&('MST '+b.mst),b.stk&&('STK '+b.stk),b.nh].filter(Boolean).join(' · '))}</small>`,'benefs');
+}
+
+/* ================= xuất file ================= */
+function download(name,blob){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500)}
+function fileBase(){return 'GDNTT_'+(F.ngay||today()).replace(/-/g,'')+(F.thuHuong.ten?'_'+norm(F.thuHuong.ten).slice(0,24):'')}
+function exportWord(){
+  const css=[...document.styleSheets[document.styleSheets.length-1].cssRules].map(r=>r.cssText).filter(t=>/^\.(page|d-)/.test(t)).join('\n');
+  const html=`<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8">
+  <style>@page WordSection1{size:21cm 29.7cm;margin:1.8cm 1.5cm 1.8cm 2.5cm}div.WordSection1{page:WordSection1}
+  body{font-family:"Times New Roman";font-size:13pt}${css}.page{width:auto;min-height:0;padding:0;box-shadow:none}
+  .pg-break{page-break-before:always}</style></head><body><div class="WordSection1">${docHTML().replace(/<\/div><div class="page">/,'</div><br class="pg-break" style="page-break-before:always"><div class="page">')}</div></body></html>`;
+  download(fileBase()+'.doc',new Blob(['﻿',html],{type:'application/msword'}));toast('Đã tải file Word');
+}
+async function exportExcel(){
+  if(!F.invoices.length)return toast('Chưa có hóa đơn để xuất bảng kê');
+  try{const X=await lib('xlsx');
+    const rows=[['BẢNG KÊ CHỨNG TỪ ĐỀ NGHỊ THANH TOÁN'],[`Kèm theo Giấy đề nghị thanh toán ngày ${vnDate(F.ngay)}${F.nguoi.ten?' của '+F.nguoi.ten:''}`],[],
+      ['STT','Ký hiệu','Số hóa đơn','Ngày','Đơn vị bán','MST bên bán','Nội dung','Tiền trước thuế','Thuế GTGT','Tổng cộng'],
+      ...F.invoices.map((v,i)=>[i+1,v.kyHieu,v.so,vnDate(v.ngay),v.ban,v.mst,v.noiDung,v.truoc||0,v.thue||0,v.tong||0]),
+      ['','','','','','','Tổng cộng',sumInv('truoc'),sumInv('thue'),sumInv('tong')]];
+    const ws=X.utils.aoa_to_sheet(rows);ws['!cols']=[5,10,12,11,34,14,34,15,13,15].map(w=>({wch:w}));
+    ws['!merges']=[{s:{r:0,c:0},e:{r:0,c:9}},{s:{r:1,c:0},e:{r:1,c:9}}];
+    for(let r=4;r<rows.length;r++)for(const c of [7,8,9]){const a=X.utils.encode_cell({r,c});if(ws[a])ws[a].z='#,##0'}
+    const wb=X.utils.book_new();X.utils.book_append_sheet(wb,ws,'Bang ke');X.writeFile(wb,fileBase()+'_bangke.xlsx');toast('Đã tải bảng kê Excel');
+  }catch(e){toast(e.message)}
+}
+function backup(){download('gdntt_saoluu_'+today()+'.json',new Blob([JSON.stringify({app:'gdntt',v:2,at:new Date().toISOString(),db,current:F},null,1)],{type:'application/json'}));toast('Đã tải file sao lưu')}
+async function restore(file){
+  try{const j=JSON.parse(await file.text());if(!j.db||!Array.isArray(j.db.drafts))throw 0;
+    const n=j.db.drafts.length;
+    if(!confirm(`Khôi phục ${n} hồ sơ và danh mục từ file này? Dữ liệu hiện tại trên máy sẽ được thay thế.`))return;
+    db=j.db;db.settings=Object.assign(structuredClone(DEF_SET),db.settings||{});['drafts','names','depts','benefs'].forEach(k=>db[k]=db[k]||[]);
+    saveDB();if(j.current)F=Object.assign(newForm(),j.current);syncInputs();renderAll();toast('Đã khôi phục dữ liệu');
+  }catch(e){toast('File không đúng định dạng sao lưu của ứng dụng')}
+}
+function doPrint(){
+  const r=validate().filter(x=>x.lv==='err');
+  if(r.length&&!$('#dlgCheck').open){showCheck();return}
+  if($('#dlgCheck').open)$('#dlgCheck').close();
+  saveForm(false);setTimeout(()=>window.print(),60);
+}
+
+/* ================= toast ================= */
+let tT;
+function toast(msg,act,fn){$('#toastTxt').textContent=msg;const b=$('#toastAct');b.hidden=!act;if(act){b.textContent=act;b.onclick=()=>{fn();$('#toast').classList.remove('show')}}
+  $('#toast').classList.add('show');clearTimeout(tT);tT=setTimeout(()=>$('#toast').classList.remove('show'),act?6000:2600)}
+
+/* ================= sự kiện ================= */
+function setTab(t){$$('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===t));$$('.pane').forEach(p=>p.hidden=p.dataset.pane!==t)}
+function setMobile(pv){document.body.classList.toggle('show-pv',pv);$('#mIn').setAttribute('aria-pressed',!pv);$('#mPv').setAttribute('aria-pressed',pv);if(pv){zoom=null;applyZoom()}}
+$('#mIn').onclick=()=>setMobile(false);$('#mPv').onclick=()=>setMobile(true);
+document.addEventListener('click',e=>{
+  $$('details.menu[open]').forEach(m=>{if(!m.contains(e.target))m.removeAttribute('open')});
+  const t=e.target.closest('button,[data-close]');if(!t)return;const d=t.dataset;
+  if(d.tab)setTab(d.tab);
+  else if(d.close!==undefined)t.closest('dialog').close();
+  else if(d.goto)gotoField(d.goto);
+  else if(d.act){t.closest('details')?.removeAttribute('open');({word:exportWord,excel:exportExcel,backup})[d.act]()}
+  else if(d.rmfile){FILES=FILES.filter(f=>f.id!==d.rmfile);F.bb=(F.bb||[]).filter(x=>x.fid!==d.rmfile);autoContent();syncInputs();changed();renderSide()}
+  else if(d.rminv){const i=F.invoices.findIndex(v=>v.id===d.rminv),rm=F.invoices.splice(i,1)[0];autoContent();syncInputs();changed();renderSide();
+    toast('Đã xoá hóa đơn','Hoàn tác',()=>{F.invoices.splice(i,0,rm);changed();renderSide()})}
+  else if(d.name!==undefined){const p=db.names[+d.name];Object.assign(F.nguoi,{ten:p.ten,boPhan:p.boPhan||F.nguoi.boPhan,stk:p.stk||'',nh:p.nh||''});syncInputs();changed();renderSide()}
+  else if(d.dept!==undefined){F.nguoi.boPhan=d.dept;syncInputs();changed();renderSide()}
+  else if(d.ndstyle){S().ndKieu=d.ndstyle;saveDB();F.ndAuto=true;F.noiDung='';autoContent();syncInputs();changed();renderChips();renderSums()}
+  else if(d.nd!==undefined){F.noiDung=d.nd;F.ndAuto=false;syncInputs();changed();renderSums();const el=$('[data-k="noiDung"]');el.focus();el.setSelectionRange(el.value.length,el.value.length)}
+  else if(d.benef!==undefined){const b=db.benefs[+d.benef];F.thuHuong={ten:b.ten,mst:b.mst||'',stk:b.stk||'',nh:b.nh||''};syncInputs();changed();renderSide()}
+  else if(d.seller){const v=F.invoices.find(x=>x.id===d.seller);F.thuHuong={ten:'',mst:'',stk:'',nh:''};fillBenefFrom(v);syncInputs();changed();renderSide()}
+  else if(d.open){const r=db.drafts.find(x=>x.id===d.open);if(dirty&&r.id!==F.id&&!confirm('Giấy đang nhập có thay đổi chưa lưu. Vẫn mở hồ sơ khác?'))return;openForm(r)}
+  else if(d.dup){const r=structuredClone(db.drafts.find(x=>x.id===d.dup));r.id=uid();r.status='nhap';r.savedAt=null;r.ngay=today();r.invoices=[];r.soTien=0;r.autoSum=true;r.chuManual=false;r.kemAuto=true;r.tamUng=0;r.checklist={};
+    F=Object.assign(newForm(),r);FILES=[];dirty=true;syncInputs();changed();renderAll();setTab('lap');toast('Đã nhân bản: giữ người đề nghị, nội dung, thụ hưởng; xoá hóa đơn và số tiền')}
+  else if(d.sub){const r=db.drafts.find(x=>x.id===d.sub);r.status=r.status==='da-nop'?'nhap':'da-nop';if(r.id===F.id)F.status=r.status;saveDB();renderDrafts();renderStatus();renderInvoices()}
+  else if(d.del){const i=db.drafts.findIndex(x=>x.id===d.del),r=db.drafts.splice(i,1)[0];saveDB();renderDrafts();renderStatus();
+    toast('Đã xoá hồ sơ','Hoàn tác',()=>{db.drafts.splice(i,0,r);saveDB();renderDrafts();renderStatus()})}
+  else if(d.rmcat){const[k,i]=d.rmcat.split(':');db[k].splice(+i,1);saveDB();renderCatalog();renderChips()}
+  else if(t.id==='saveName'){learn();saveDB();renderChips();renderCatalog();toast('Đã lưu tên người đề nghị')}
+  else if(t.id==='saveDept'){db.depts.unshift(F.nguoi.boPhan.trim());saveDB();renderChips();renderCatalog();toast('Đã lưu bộ phận')}
+});
+$('#btnCheck').onclick=showCheck;
+$('#btnSave').onclick=()=>saveForm();
+$('#btnPrint').onclick=doPrint;
+$('#dlgPrint').onclick=()=>{$('#dlgCheck').close();saveForm(false);setTimeout(()=>window.print(),60)};
+$('#addInv').onclick=()=>{addInvoice({id:uid(),src:'manual'});changed();renderSide();const c=$$('.inv').at(-1);c.scrollIntoView({block:'center'});c.querySelector('input').focus()};
+$('#btnReread').onclick=()=>{F.chuManual=false;changed();syncInputs()};
+$('#btnHdToND').onclick=()=>{F.noiDung=contractText();F.ndAuto=true;syncInputs();changed();renderSums()};
+$('#btnHdToTH').onclick=()=>{if(!F.hd.benB)return toast('Chưa nhập Bên B');F.thAuto=false;F.thuHuong={ten:F.hd.benB,mst:'',stk:'',nh:''};const b=matchBenef(F.hd.benB,'');if(b)Object.assign(F.thuHuong,{stk:b.stk,nh:b.nh,mst:b.mst});syncInputs();changed();renderSide()};
+$('#btnSelfTH').onclick=()=>{if(!F.nguoi.ten)return gotoField('nguoi.ten');F.thuHuong={ten:F.nguoi.ten,mst:'',stk:F.nguoi.stk||'',nh:F.nguoi.nh||''};syncInputs();changed();renderSide()};
+$('#btnSaveTH').onclick=()=>{if(!F.thuHuong.ten)return gotoField('thuHuong.ten');saveBenef(false)};
+$('#btnKyReset').onclick=()=>{S().ky=structuredClone(DEF_KY);S().kyFont=11;S().kyGap=20;saveDB();syncInputs();renderKy();renderRanges();renderPreview();renderSums()};
+$('#btnNew').onclick=$('#btnNew2').onclick=()=>{if(dirty&&!confirm('Giấy đang nhập có thay đổi chưa lưu. Lập giấy mới?'))return;freshForm();toast('Đã tạo giấy mới')};
+$('#btnClear').onclick=()=>{const bk=structuredClone(F),bf=FILES;F=Object.assign(newForm(),{id:F.id});FILES=[];syncInputs();changed();renderSide();
+  toast('Đã xoá nội dung','Hoàn tác',()=>{F=bk;FILES=bf;syncInputs();changed();renderSide()})};
+$('#btnWipe').onclick=()=>{if(!confirm('Xoá toàn bộ hồ sơ, danh mục và thiết lập trên máy này? Không thể hoàn tác.'))return;
+  try{localStorage.removeItem(KEY);localStorage.removeItem(CUR)}catch(e){}location.reload()};
+$('#restoreIn').onchange=e=>{if(e.target.files[0])restore(e.target.files[0]);e.target.value=''};
+$('#textSel').onchange=renderFiles;
+const fi=$('#fileIn'),dz=$('#drop');
+fi.onchange=()=>{handleFiles([...fi.files]);fi.value=''};
+['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('over')}));
+['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('over')}));
+dz.addEventListener('drop',e=>handleFiles([...e.dataTransfer.files]));
+addEventListener('dragover',e=>e.preventDefault());addEventListener('drop',e=>{e.preventDefault();if(e.dataTransfer.files.length&&!dz.contains(e.target))handleFiles([...e.dataTransfer.files])});
+addEventListener('keydown',e=>{const m=e.ctrlKey||e.metaKey;
+  if(m&&e.key.toLowerCase()==='s'){e.preventDefault();saveForm()}
+  else if(m&&e.key.toLowerCase()==='p'){e.preventDefault();doPrint()}
+  else if(m&&e.key==='Enter'){e.preventDefault();showCheck()}});
+addEventListener('beforeprint',()=>{$('#pages').style.zoom=1});
+addEventListener('afterprint',applyZoom);
+addEventListener('beforeunload',()=>store(CUR,F));
+
+function renderGuide(){let h=false;try{h=localStorage.getItem('gdntt.guide')==='hide'}catch(e){}$('#guide').hidden=h}
+$('#guideHide').onclick=()=>{try{localStorage.setItem('gdntt.guide','hide')}catch(e){}renderGuide()};
+$('#guideShow').onclick=()=>{try{localStorage.removeItem('gdntt.guide')}catch(e){}renderGuide();$('#dlgHelp').close();setTab('lap');setMobile(false);$('.pane[data-pane=lap]').scrollTop=0};
+$('#btnHelp').onclick=()=>$('#dlgHelp').showModal();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+
+/* ================= khởi động ================= */
+renderGuide();compute();syncInputs();renderAll();
+</script>
+</body>
+</html>
